@@ -2,18 +2,15 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
-import Header from '@/components/Header';
-import HeroSection from '@/components/HeroSection';
-import Footer from '@/components/Footer';
 
 const Index = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
-    direction: ''
+    message: ''
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -22,80 +19,142 @@ const Index = () => {
       title: 'Заявка отправлена!',
       description: 'Мы свяжемся с вами в ближайшее время'
     });
-    setFormData({ name: '', phone: '', direction: '' });
+    setFormData({ name: '', message: '' });
   };
 
   const directions = [
     {
       title: 'Лезгинка',
-      subtitle: 'Традиционный танец с огненным характером',
       level: 'Начинающие',
-      duration: '1.5 часа',
-      price: '3500₽/мес'
+      duration: '1 час 30 мин',
+      price: 'от 500₽'
     },
     {
       title: 'Кавказские барабаны',
-      subtitle: 'Ритмы гор в ваших руках',
-      level: 'Начинающие',
-      duration: '1.5 часа',
-      price: '3500₽/мес'
+      level: 'Средний',
+      duration: '1 час 30 мин',
+      price: 'от 500₽'
     },
     {
       title: 'Семейная лезгинка',
-      subtitle: 'Танцы для всей семьи',
       level: 'Начинающие',
-      duration: '1 час',
-      price: '3500₽/мес'
+      duration: '1 час 30 мин',
+      price: 'от 500₽'
     },
     {
       title: 'Индивидуальные занятия',
-      subtitle: 'Персональный подход к каждому',
-      level: 'Любой уровень',
-      duration: '1 час',
-      price: '2500₽/час'
+      level: 'Начинающие',
+      duration: '1 час 30 мин',
+      price: 'от 500₽'
     }
   ];
 
-  const schedule = {
-    drums: [
-      { time: '12:00-13:30', group: 'Начальная группа' },
-      { time: '13:30-15:00', group: 'Концертный состав' }
-    ],
-    family: [
-      { time: '15:00-16:30', group: 'Детская группа' },
-      { time: '16:30-18:00', group: 'Взрослая группа' }
-    ],
-    wedding: [
-      { time: '18:00-19:00', group: 'Женская группа' },
-      { time: '19:00-20:00', group: 'Мужская группа' }
-    ]
-  };
+  const schedule = [
+    {
+      title: 'Кавказские барабаны',
+      sessions: [
+        { time: '12:00', description: 'Начальная группа' },
+        { time: '13:30-15:00', description: 'Концертный состав' }
+      ]
+    },
+    {
+      title: 'Семейная лезгинка',
+      sessions: [
+        { time: '15:00-16:30', description: 'Детская группа' },
+        { time: '16:30-18:00', description: 'Взрослая группа' }
+      ]
+    },
+    {
+      title: 'Свадебная лезгинка',
+      sessions: [
+        { time: '18:00-19:00', description: 'Женская группа' },
+        { time: '19:00-20:00', description: 'Мужская группа' }
+      ]
+    }
+  ];
 
   const prices = [
     {
       title: 'Абонемент на месяц',
-      price: '3500₽',
-      features: ['8 занятий в месяц', 'Групповые занятия', 'Все материалы включены']
+      price: '3000₽',
+      period: 'в месяц',
+      features: [
+        'Посещение групповых занятий',
+        'Доступ к расписанию',
+        '8 занятий'
+      ]
     },
     {
       title: 'Общее абонемент',
-      price: '5000₽',
-      features: ['12 занятий в месяц', 'Групповые занятия', 'Доступ к мастер-классам'],
-      popular: true
+      price: '5500₽',
+      period: 'в месяц',
+      popular: true,
+      features: [
+        'Посещение всех направлений',
+        'Приоритетная запись',
+        'Безлимитные занятия'
+      ]
     },
     {
       title: 'Индивидуальное обучение',
       price: '2500₽',
-      features: ['Персональный подход', 'Гибкое расписание', 'Быстрый прогресс']
+      period: 'за занятие',
+      features: [
+        'Персональный подход',
+        'Гибкий график',
+        'Быстрый прогресс'
+      ]
     }
+  ];
+
+  const gallery = [
+    'https://cdn.poehali.dev/files/b42a71b1-b412-49c4-a137-8a2dbb7f4f92.jpeg',
+    'https://cdn.poehali.dev/files/b42a71b1-b412-49c4-a137-8a2dbb7f4f92.jpeg',
+    'https://cdn.poehali.dev/files/b42a71b1-b412-49c4-a137-8a2dbb7f4f92.jpeg',
+    'https://cdn.poehali.dev/files/b42a71b1-b412-49c4-a137-8a2dbb7f4f92.jpeg',
+    'https://cdn.poehali.dev/files/b42a71b1-b412-49c4-a137-8a2dbb7f4f92.jpeg',
+    'https://cdn.poehali.dev/files/b42a71b1-b412-49c4-a137-8a2dbb7f4f92.jpeg',
+    'https://cdn.poehali.dev/files/b42a71b1-b412-49c4-a137-8a2dbb7f4f92.jpeg',
+    'https://cdn.poehali.dev/files/b42a71b1-b412-49c4-a137-8a2dbb7f4f92.jpeg'
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-      <HeroSection />
+      <header className="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-orange-600 rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Р</span>
+            </div>
+            <div>
+              <div className="font-bold text-gray-900">Rhythmigor Shop</div>
+              <div className="text-xs text-gray-600">Школа лезгинки и барабанов</div>
+            </div>
+          </div>
+          <Button className="bg-red-600 hover:bg-red-700">Записаться</Button>
+        </div>
+      </header>
 
-      <section id="directions" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+      <section className="relative bg-gradient-to-r from-red-700 via-red-600 to-orange-600 text-white py-32 px-4 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-40 h-40 border-4 border-white rounded-full"></div>
+          <div className="absolute bottom-10 right-10 w-60 h-60 border-4 border-white rounded-full"></div>
+        </div>
+        <div className="container mx-auto text-center relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Почувствуй<br />Rhythms Rigor
+          </h1>
+          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            Изучи лезгинку и кавказские барабаны с лучшими преподавателями.<br />
+            Присоединяйся к нашему сообществу!
+          </p>
+          <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100 text-lg px-8 py-6">
+            Записаться на занятие
+          </Button>
+        </div>
+      </section>
+
+      <section id="directions" className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center mb-3 text-gray-900">
             Направления обучения
@@ -106,32 +165,23 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {directions.map((dir, idx) => (
-              <Card key={idx} className="bg-white border-2 hover:shadow-xl transition-all duration-300 overflow-hidden group">
-                <CardContent className="p-6 relative">
-                  <div className="absolute top-0 right-0 w-32 h-32 opacity-5 group-hover:opacity-10 transition-opacity" style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='20' fill='none' stroke='%23DC2626' stroke-width='2'/%3E%3Cpath d='M30 15 L35 25 L45 25 L37 32 L40 42 L30 35 L20 42 L23 32 L15 25 L25 25 Z' fill='%23DC2626'/%3E%3C/svg%3E")`,
-                    backgroundSize: 'cover'
-                  }} />
-                  <div className="relative z-10">
-                    <div className="inline-block px-3 py-1 bg-red-50 text-red-600 text-xs font-semibold rounded-full mb-3">
-                      {dir.level}
+              <Card key={idx} className="border-2 hover:shadow-xl transition-all bg-red-600 text-white">
+                <CardContent className="p-6">
+                  <div className="inline-block px-3 py-1 bg-white text-red-600 text-xs font-bold rounded mb-3">
+                    {dir.level}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">{dir.title}</h3>
+                  <div className="flex items-center gap-4 text-sm opacity-90 mb-4">
+                    <div className="flex items-center gap-1">
+                      <Icon name="Clock" size={16} />
+                      <span>{dir.duration}</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 text-gray-900">{dir.title}</h3>
-                    <p className="text-gray-600 mb-4 text-sm">{dir.subtitle}</p>
-                    
-                    <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
-                      <div className="flex items-center gap-1">
-                        <Icon name="Clock" size={16} className="text-red-600" />
-                        <span>{dir.duration}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                      <span className="text-2xl font-bold text-red-600">{dir.price}</span>
-                      <Button className="bg-gradient-to-r from-red-600 to-red-700 text-white hover:shadow-lg transition-all">
-                        Записаться
-                      </Button>
-                    </div>
+                  </div>
+                  <div className="flex items-center justify-between pt-4 border-t border-white/20">
+                    <span className="text-2xl font-bold">{dir.price}</span>
+                    <Button className="bg-white text-red-600 hover:bg-gray-100">
+                      Записаться
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -140,13 +190,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="schedule" className="py-20 px-4 bg-white relative">
-        <div className="absolute top-10 left-10 w-20 h-20 opacity-5" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 Q50 30 40 50 Q30 30 40 10' fill='%23DC2626'/%3E%3Cpath d='M40 30 Q60 40 40 70 Q20 40 40 30' fill='%23EA580C'/%3E%3C/svg%3E")`
-        }} />
-        <div className="absolute bottom-10 right-10 w-20 h-20 opacity-5" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 Q50 30 40 50 Q30 30 40 10' fill='%23DC2626'/%3E%3Cpath d='M40 30 Q60 40 40 70 Q20 40 40 30' fill='%23EA580C'/%3E%3C/svg%3E")`
-        }} />
+      <section id="schedule" className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center mb-3 text-gray-900">
             Расписание занятий
@@ -156,94 +200,50 @@ const Index = () => {
           </p>
 
           <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">Кавказские барабаны</h3>
-              <div className="space-y-3">
-                {schedule.drums.map((item, idx) => (
-                  <Card key={idx}>
-                    <CardContent className="p-4 flex items-center justify-between">
-                      <div className="flex items-center gap-4">
-                        <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold">
-                          {item.time}
-                        </div>
-                        <span className="text-gray-700">{item.group}</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+            {schedule.map((item, idx) => (
+              <div key={idx} className="border-l-4 border-red-600 pl-6">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">{item.title}</h3>
+                <div className="space-y-3">
+                  {item.sessions.map((session, sidx) => (
+                    <div key={sidx} className="flex items-center gap-4 bg-gray-50 p-4 rounded">
+                      <div className="text-red-600 font-bold min-w-[120px]">{session.time}</div>
+                      <div className="text-gray-700">{session.description}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">Семейная лезгинка</h3>
-              <div className="space-y-3">
-                {schedule.family.map((item, idx) => (
-                  <Card key={idx}>
-                    <CardContent className="p-4 flex items-center justify-between">
-                      <div className="flex items-center gap-4">
-                        <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold">
-                          {item.time}
-                        </div>
-                        <span className="text-gray-700">{item.group}</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">Свадебная лезгинка</h3>
-              <div className="space-y-3">
-                {schedule.wedding.map((item, idx) => (
-                  <Card key={idx}>
-                    <CardContent className="p-4 flex items-center justify-between">
-                      <div className="flex items-center gap-4">
-                        <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold">
-                          {item.time}
-                        </div>
-                        <span className="text-gray-700">{item.group}</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section id="prices" className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-3 text-gray-900">
-            Стоимость занятий
-          </h2>
-          <p className="text-center text-gray-600 mb-12">
-            Выбирайте подходящий тариф для себя
-          </p>
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Цены</h2>
           
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {prices.map((price, idx) => (
-              <Card key={idx} className={price.popular ? 'border-2 border-red-600 shadow-lg' : ''}>
-                <CardContent className="p-6">
-                  {price.popular && (
-                    <div className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
-                      ПОПУЛЯРНЫЙ
-                    </div>
-                  )}
-                  <h3 className="text-2xl font-bold mb-4 text-gray-800">{price.title}</h3>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-red-600">{price.price}</span>
+              <Card key={idx} className={`relative ${price.popular ? 'border-red-600 border-2 shadow-xl' : ''}`}>
+                {price.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-1 rounded-full text-sm font-bold">
+                    Популярно
                   </div>
-                  <ul className="space-y-3 mb-6">
+                )}
+                <CardContent className="p-6 text-center">
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">{price.title}</h3>
+                  <div className="mb-6">
+                    <div className="text-4xl font-bold text-red-600">{price.price}</div>
+                    <div className="text-sm text-gray-600">{price.period}</div>
+                  </div>
+                  <ul className="space-y-3 mb-6 text-left">
                     {price.features.map((feature, fidx) => (
-                      <li key={fidx} className="flex items-start gap-2">
-                        <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-600">{feature}</span>
+                      <li key={fidx} className="flex items-start gap-2 text-gray-700">
+                        <Icon name="Check" size={16} className="text-red-600 mt-1 flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <Button className={`w-full ${price.popular ? 'bg-red-600 hover:bg-red-700 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-800'}`}>
+                  <Button className={`w-full ${price.popular ? 'bg-red-600 hover:bg-red-700' : 'bg-gray-900 hover:bg-gray-800'}`}>
                     Выбрать
                   </Button>
                 </CardContent>
@@ -253,176 +253,123 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="gallery" className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-3 text-gray-900">
-            Галерея
-          </h2>
-          <p className="text-center text-gray-600 mb-12">
-            Наши лучшие моменты, запечатленные в фото и видео
-          </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-            {[
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg',
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/d2e5d6ed-28ae-4f3f-b24f-6add9ab9ecbf.jpg',
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/16e2ed7a-3365-46f7-925c-63b91e7588d4.jpg',
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg',
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/d2e5d6ed-28ae-4f3f-b24f-6add9ab9ecbf.jpg',
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/16e2ed7a-3365-46f7-925c-63b91e7588d4.jpg',
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg',
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/d2e5d6ed-28ae-4f3f-b24f-6add9ab9ecbf.jpg',
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/16e2ed7a-3365-46f7-925c-63b91e7588d4.jpg',
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg',
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/d2e5d6ed-28ae-4f3f-b24f-6add9ab9ecbf.jpg',
-              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/16e2ed7a-3365-46f7-925c-63b91e7588d4.jpg'
-            ].map((img, idx) => (
-              <div key={idx} className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
-                <img 
-                  src={img} 
-                  alt={`Галерея ${idx + 1}`}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300" />
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Галерея</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            {gallery.map((img, idx) => (
+              <div key={idx} className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <img src={img} alt={`Занятие ${idx + 1}`} className="w-full h-full object-cover" />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-4 bg-gray-50">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-3 text-gray-900">
-            Контакты
-          </h2>
-          <p className="text-center text-gray-600 mb-12">
-            Приглашаем в нашу школу находиться на получение подробной информации
-          </p>
+      <section id="contacts" className="py-20 px-4 bg-gray-900 text-white">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl font-bold text-center mb-12">Контакты</h2>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name="MapPin" size={20} className="text-white" />
-                </div>
+              <div className="flex items-start gap-3">
+                <Icon name="MapPin" className="text-red-500 mt-1" size={20} />
                 <div>
-                  <h3 className="font-bold text-lg mb-1">Адрес</h3>
-                  <p className="text-gray-600">Санкт-Петербург, ул. Примерная, д. 1</p>
-                  <p className="text-gray-600">Метро "Площадь Восстания"</p>
-                  <Button className="mt-3 bg-red-600 hover:bg-red-700 text-white">
-                    Открыть на карте
-                  </Button>
+                  <div className="font-semibold mb-1">Адрес</div>
+                  <div className="text-gray-300">г. Москва, ул. Примерная, д. 1</div>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name="Phone" size={20} className="text-white" />
-                </div>
+              <div className="flex items-start gap-3">
+                <Icon name="Phone" className="text-red-500 mt-1" size={20} />
                 <div>
-                  <h3 className="font-bold text-lg mb-1">Телефон</h3>
-                  <p className="text-gray-600">+7 (999) 123-45-67</p>
-                  <p className="text-gray-600 text-sm">С 10:00 до 21:00</p>
+                  <div className="font-semibold mb-1">Телефон</div>
+                  <div className="text-gray-300">+7 (999) 123-45-67</div>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name="Mail" size={20} className="text-white" />
-                </div>
+              <div className="flex items-start gap-3">
+                <Icon name="Mail" className="text-red-500 mt-1" size={20} />
                 <div>
-                  <h3 className="font-bold text-lg mb-1">Email</h3>
-                  <p className="text-gray-600">info@ritmygor.ru</p>
-                  <p className="text-gray-600 text-sm">Ответим в течение дня</p>
+                  <div className="font-semibold mb-1">Email</div>
+                  <div className="text-gray-300">info@rhythmigor.ru</div>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name="Clock" size={20} className="text-white" />
-                </div>
+              <div className="flex items-start gap-3">
+                <Icon name="Clock" className="text-red-500 mt-1" size={20} />
                 <div>
-                  <h3 className="font-bold text-lg mb-1">График</h3>
-                  <p className="text-gray-600">Ежедневно с 10:00 до 22:00</p>
-                  <p className="text-gray-600 text-sm">Суббота и воскресенье с 09:00</p>
+                  <div className="font-semibold mb-1">Режим работы</div>
+                  <div className="text-gray-300">Пн-Вс: 10:00 - 22:00</div>
                 </div>
               </div>
             </div>
 
-            <div>
-              <Card className="shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">Записаться на занятие</h3>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-1">Имя</label>
-                      <Input
-                        required
-                        placeholder="Ваше имя"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-1">Телефон</label>
-                      <Input
-                        required
-                        type="tel"
-                        placeholder="+7 (___) ___-__-__"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-1">Направление</label>
-                      <select 
-                        className="w-full border rounded-md p-2"
-                        value={formData.direction}
-                        onChange={(e) => setFormData({ ...formData, direction: e.target.value })}
-                      >
-                        <option value="">Выберите направление</option>
-                        <option value="lezginka">Лезгинка</option>
-                        <option value="drums">Кавказские барабаны</option>
-                        <option value="family">Семейная лезгинка</option>
-                        <option value="individual">Индивидуальные занятия</option>
-                      </select>
-                    </div>
-                    <Button 
-                      type="submit"
-                      className="w-full bg-red-600 hover:bg-red-700 text-white py-6"
-                    >
-                      Записаться на занятие
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <h3 className="text-2xl font-bold mb-4">Записаться на занятие</h3>
+              <Input
+                placeholder="Ваше имя"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="bg-gray-800 border-gray-700 text-white"
+                required
+              />
+              <Textarea
+                placeholder="Сообщение"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="bg-gray-800 border-gray-700 text-white min-h-[120px]"
+              />
+              <Button type="submit" className="w-full bg-red-600 hover:bg-red-700">
+                Отправить заявку
+              </Button>
+            </form>
+          </div>
 
-              <div className="mt-6 rounded-lg overflow-hidden h-64">
-                <iframe 
-                  src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=1234567890"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  className="w-full h-full"
-                />
+          <div className="mt-12 pt-8 border-t border-gray-800">
+            <div className="bg-red-600 h-64 rounded-lg flex items-center justify-center text-white">
+              <div className="text-center">
+                <Icon name="MapPin" size={48} className="mx-auto mb-2" />
+                <p>Карта местоположения</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="fixed bottom-6 right-6 z-40">
-        <a
-          href="https://wa.me/79991234567"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
-        >
-          <Icon name="MessageCircle" size={32} className="text-white" />
-        </a>
-      </div>
-
-      <Footer />
+      <footer className="bg-gray-950 text-gray-400 py-12 px-4">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h4 className="text-white font-bold mb-4">О школе</h4>
+              <p className="text-sm">Rhythmigor Shop - школа лезгинки и кавказских барабанов в Москве</p>
+            </div>
+            <div>
+              <h4 className="text-white font-bold mb-4">Навигация</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#directions" className="hover:text-red-500">Направления</a></li>
+                <li><a href="#schedule" className="hover:text-red-500">Расписание</a></li>
+                <li><a href="#prices" className="hover:text-red-500">Цены</a></li>
+                <li><a href="#contacts" className="hover:text-red-500">Контакты</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-bold mb-4">Мы в соцсетях</h4>
+              <div className="flex gap-3">
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition">
+                  <Icon name="Facebook" size={20} />
+                </a>
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition">
+                  <Icon name="Instagram" size={20} />
+                </a>
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition">
+                  <Icon name="Youtube" size={20} />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 text-center text-sm">
+            <p>© 2025 Rhythmigor Shop. Все права защищены.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
