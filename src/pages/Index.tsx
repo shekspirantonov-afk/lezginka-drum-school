@@ -89,11 +89,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
+      <header className="bg-white border-b sticky top-0 z-50">
+        <div className="container mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-300">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-full overflow-hidden border border-gray-200">
                 <img 
                   src="https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg" 
                   alt="Логотип"
@@ -101,54 +101,64 @@ const Index = () => {
                 />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-orange-600">Ритмы Гор</h1>
-                <p className="text-xs text-gray-600">Школа лезгинки и<br/>кавказских барабанов</p>
+                <h1 className="text-2xl font-bold text-orange-600">Ритмы Гор</h1>
+                <p className="text-sm text-gray-600">Школа лезгинки и кавказских барабанов</p>
               </div>
             </div>
             
-            <nav className="hidden md:flex items-center gap-6 text-sm text-gray-700">
-              <a href="#directions" className="hover:text-orange-600">Направления</a>
-              <a href="#schedule" className="hover:text-orange-600">Расписание</a>
-              <a href="#prices" className="hover:text-orange-600">Цены</a>
-              <a href="#gallery" className="hover:text-orange-600">Галерея</a>
-              <a href="#contact" className="hover:text-orange-600">Контакты</a>
+            <nav className="hidden md:flex items-center gap-8 text-base text-gray-700">
+              <a href="#directions" className="hover:text-orange-600 transition-colors">Направления</a>
+              <a href="#schedule" className="hover:text-orange-600 transition-colors">Расписание</a>
+              <a href="#achievements" className="hover:text-orange-600 transition-colors">Достижения</a>
+              <a href="#teachers" className="hover:text-orange-600 transition-colors">Преподаватели</a>
+              <a href="#gallery" className="hover:text-orange-600 transition-colors">Галерея</a>
+              <a href="#contact" className="hover:text-orange-600 transition-colors">Контакты</a>
             </nav>
 
-            <Button className="bg-red-600 hover:bg-red-700 text-white">
+            <Button className="bg-red-600 hover:bg-red-700 text-white px-8">
               Записаться
             </Button>
           </div>
         </div>
       </header>
 
-      <section className="relative py-24 px-4 bg-gradient-to-br from-red-700 via-red-600 to-orange-600 text-white">
-        <div className="container mx-auto text-center">
+      <section className="relative py-32 px-6 bg-gradient-to-r from-[#8B2519] via-[#B8421F] to-[#D2691E] text-white overflow-hidden">
+        <div className="absolute top-8 left-12 opacity-40">
+          <Icon name="Music" size={48} className="text-white" />
+        </div>
+        <div className="absolute bottom-12 right-16 opacity-40">
+          <Icon name="Sparkles" size={48} className="text-white" />
+        </div>
+        
+        <div className="container mx-auto text-center relative z-10">
           <h2 className="text-5xl md:text-6xl font-bold mb-4">
             Почувствуй
           </h2>
           <h3 
-            className="text-6xl md:text-7xl font-bold mb-8"
+            className="text-7xl md:text-8xl font-black mb-10"
             style={{ 
-              WebkitTextStroke: '2px white',
-              color: 'transparent'
+              WebkitTextStroke: '3px white',
+              color: 'transparent',
+              letterSpacing: '0.02em'
             }}
           >
             Ритмы Гор
           </h3>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
             Изучай традиционные кавказские танцы и барабаны с<br/>профессиональными мастерами
           </p>
           
-          <div className="flex flex-col md:flex-row items-center justify-center gap-3 max-w-2xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
             <Button 
               size="lg" 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-7 text-lg font-semibold rounded-md flex items-center gap-2"
             >
+              <Icon name="Play" size={20} />
               Начать обучение
             </Button>
             <Input 
-              placeholder="Ваш номер телефона" 
-              className="bg-white text-gray-800 py-6 md:flex-1"
+              placeholder="" 
+              className="bg-white text-gray-800 py-7 md:flex-1 border-0 rounded-md"
             />
           </div>
         </div>
