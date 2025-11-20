@@ -89,7 +89,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="bg-white border-b sticky top-0 z-50">
+      <header className="bg-white border-b sticky top-0 z-50 mx-0 px-0">
         <div className="container mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -101,8 +101,8 @@ const Index = () => {
                 />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-orange-600">Ритмы Гор</h1>
-                <p className="text-sm text-gray-600">Школа лезгинки и кавказских барабанов</p>
+                <h1 className="text-2xl font-bold text-orange-600"></h1>
+                <p className="text-sm text-gray-600"></p>
               </div>
             </div>
             
