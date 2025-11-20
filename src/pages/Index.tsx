@@ -299,56 +299,161 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-2xl">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-            Записаться на занятие
+      <section id="gallery" className="py-20 px-4 bg-white">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-3 text-gray-900">
+            Галерея
           </h2>
-          <Card className="shadow-lg">
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Ваше имя</label>
-                  <Input
-                    required
-                    placeholder="Иван Иванов"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  />
+          <p className="text-center text-gray-600 mb-12">
+            Наши лучшие моменты, запечатленные в фото и видео
+          </p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+            {[
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg',
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/d2e5d6ed-28ae-4f3f-b24f-6add9ab9ecbf.jpg',
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/16e2ed7a-3365-46f7-925c-63b91e7588d4.jpg',
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg',
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/d2e5d6ed-28ae-4f3f-b24f-6add9ab9ecbf.jpg',
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/16e2ed7a-3365-46f7-925c-63b91e7588d4.jpg',
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg',
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/d2e5d6ed-28ae-4f3f-b24f-6add9ab9ecbf.jpg',
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/16e2ed7a-3365-46f7-925c-63b91e7588d4.jpg',
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg',
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/d2e5d6ed-28ae-4f3f-b24f-6add9ab9ecbf.jpg',
+              'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/16e2ed7a-3365-46f7-925c-63b91e7588d4.jpg'
+            ].map((img, idx) => (
+              <div key={idx} className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                <img 
+                  src={img} 
+                  alt={`Галерея ${idx + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-20 px-4 bg-gray-50">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-3 text-gray-900">
+            Контакты
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            Приглашаем в нашу школу находиться на получение подробной информации
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon name="MapPin" size={20} className="text-white" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Телефон</label>
-                  <Input
-                    required
-                    type="tel"
-                    placeholder="+7 (___) ___-__-__"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  />
+                  <h3 className="font-bold text-lg mb-1">Адрес</h3>
+                  <p className="text-gray-600">Санкт-Петербург, ул. Примерная, д. 1</p>
+                  <p className="text-gray-600">Метро "Площадь Восстания"</p>
+                  <Button className="mt-3 bg-red-600 hover:bg-red-700 text-white">
+                    Открыть на карте
+                  </Button>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon name="Phone" size={20} className="text-white" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Направление</label>
-                  <select 
-                    className="w-full border rounded-md p-2"
-                    value={formData.direction}
-                    onChange={(e) => setFormData({ ...formData, direction: e.target.value })}
-                  >
-                    <option value="">Выберите направление</option>
-                    <option value="lezginka">Лезгинка</option>
-                    <option value="drums">Кавказские барабаны</option>
-                    <option value="family">Семейная лезгинка</option>
-                    <option value="individual">Индивидуальные занятия</option>
-                  </select>
+                  <h3 className="font-bold text-lg mb-1">Телефон</h3>
+                  <p className="text-gray-600">+7 (999) 123-45-67</p>
+                  <p className="text-gray-600 text-sm">С 10:00 до 21:00</p>
                 </div>
-                <Button 
-                  type="submit"
-                  className="w-full bg-red-600 hover:bg-red-700 text-white py-6"
-                >
-                  Отправить заявку
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon name="Mail" size={20} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Email</h3>
+                  <p className="text-gray-600">info@ritmygor.ru</p>
+                  <p className="text-gray-600 text-sm">Ответим в течение дня</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon name="Clock" size={20} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">График</h3>
+                  <p className="text-gray-600">Ежедневно с 10:00 до 22:00</p>
+                  <p className="text-gray-600 text-sm">Суббота и воскресенье с 09:00</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <Card className="shadow-lg">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4">Записаться на занятие</h3>
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-1">Имя</label>
+                      <Input
+                        required
+                        placeholder="Ваше имя"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-1">Телефон</label>
+                      <Input
+                        required
+                        type="tel"
+                        placeholder="+7 (___) ___-__-__"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-1">Направление</label>
+                      <select 
+                        className="w-full border rounded-md p-2"
+                        value={formData.direction}
+                        onChange={(e) => setFormData({ ...formData, direction: e.target.value })}
+                      >
+                        <option value="">Выберите направление</option>
+                        <option value="lezginka">Лезгинка</option>
+                        <option value="drums">Кавказские барабаны</option>
+                        <option value="family">Семейная лезгинка</option>
+                        <option value="individual">Индивидуальные занятия</option>
+                      </select>
+                    </div>
+                    <Button 
+                      type="submit"
+                      className="w-full bg-red-600 hover:bg-red-700 text-white py-6"
+                    >
+                      Записаться на занятие
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+
+              <div className="mt-6 rounded-lg overflow-hidden h-64">
+                <iframe 
+                  src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=1234567890"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -363,9 +468,61 @@ const Index = () => {
         </a>
       </div>
 
-      <footer className="bg-gray-900 text-white py-8 px-4">
-        <div className="container mx-auto text-center">
-          <p className="text-gray-400">© 2025 Ритмы Гор. Все права защищены.</p>
+      <footer className="bg-gray-900 text-white py-12 px-4">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-700">
+                  <img 
+                    src="https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg" 
+                    alt="Логотип"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-orange-500">Ритмы Гор</h3>
+                  <p className="text-xs text-gray-400">Школа лезгинки и барабанов</p>
+                </div>
+              </div>
+              <p className="text-gray-400 text-sm">
+                Приобщайтесь к традиционным кавказским танцам и музыке вместе с профессиональными мастерами. 
+                Занятия для детей и взрослых.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">Направления</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li><a href="#directions" className="hover:text-orange-500 transition-colors">Лезгинка</a></li>
+                <li><a href="#directions" className="hover:text-orange-500 transition-colors">Кавказские барабаны</a></li>
+                <li><a href="#directions" className="hover:text-orange-500 transition-colors">Семейная лезгинка</a></li>
+                <li><a href="#directions" className="hover:text-orange-500 transition-colors">Индивидуальные занятия</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">Контакты</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li className="flex items-center gap-2">
+                  <Icon name="Phone" size={16} />
+                  <span>+7 (999) 123-45-67</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="Mail" size={16} />
+                  <span>info@ritmygor.ru</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="MapPin" size={16} />
+                  <span>Санкт-Петербург, ул. Примерная, д. 1</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+            <p>© 2025 Ритмы Гор. Все права защищены.</p>
+          </div>
         </div>
       </footer>
     </div>
