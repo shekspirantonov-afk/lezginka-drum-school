@@ -9,11 +9,11 @@ const HeroSection = () => {
       </div>
       
       <div className="container mx-auto text-center relative z-10">
-        <h2 className="text-6xl md:text-7xl font-bold mb-6">
+        <h2 className="text-6xl md:text-7xl mb-6 font-extrabold">
           Почувствуй
         </h2>
         <h3 
-          className="text-7xl md:text-8xl lg:text-9xl font-black mb-12 animate-pulse"
+          className="md:text-8xl lg:text-9xl font-black mb-12 animate-pulse text-6xl text-center"
           style={{ 
             WebkitTextStroke: '3px white',
             color: 'transparent',
