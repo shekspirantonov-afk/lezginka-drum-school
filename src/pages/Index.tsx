@@ -160,15 +160,14 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Кавказские барабаны</h3>
               <div className="space-y-3">
                 {schedule.drums.map((item, idx) => (
-                  <Card key={idx} className="hover:shadow-md transition-shadow">
-                    <CardContent className="p-4 flex items-center justify-between hover:bg-red-50 transition-colors rounded-lg">
+                  <Card key={idx}>
+                    <CardContent className="p-4 flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className="bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-lg font-semibold shadow-sm">
+                        <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold">
                           {item.time}
                         </div>
-                        <span className="text-gray-700 font-medium">{item.group}</span>
+                        <span className="text-gray-700">{item.group}</span>
                       </div>
-                      <Icon name="ChevronRight" size={20} className="text-red-600" />
                     </CardContent>
                   </Card>
                 ))}
@@ -179,15 +178,14 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Семейная лезгинка</h3>
               <div className="space-y-3">
                 {schedule.family.map((item, idx) => (
-                  <Card key={idx} className="hover:shadow-md transition-shadow">
-                    <CardContent className="p-4 flex items-center justify-between hover:bg-red-50 transition-colors rounded-lg">
+                  <Card key={idx}>
+                    <CardContent className="p-4 flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className="bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-lg font-semibold shadow-sm">
+                        <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold">
                           {item.time}
                         </div>
-                        <span className="text-gray-700 font-medium">{item.group}</span>
+                        <span className="text-gray-700">{item.group}</span>
                       </div>
-                      <Icon name="ChevronRight" size={20} className="text-red-600" />
                     </CardContent>
                   </Card>
                 ))}
@@ -198,15 +196,14 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Свадебная лезгинка</h3>
               <div className="space-y-3">
                 {schedule.wedding.map((item, idx) => (
-                  <Card key={idx} className="hover:shadow-md transition-shadow">
-                    <CardContent className="p-4 flex items-center justify-between hover:bg-red-50 transition-colors rounded-lg">
+                  <Card key={idx}>
+                    <CardContent className="p-4 flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className="bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-lg font-semibold shadow-sm">
+                        <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold">
                           {item.time}
                         </div>
-                        <span className="text-gray-700 font-medium">{item.group}</span>
+                        <span className="text-gray-700">{item.group}</span>
                       </div>
-                      <Icon name="ChevronRight" size={20} className="text-red-600" />
                     </CardContent>
                   </Card>
                 ))}
