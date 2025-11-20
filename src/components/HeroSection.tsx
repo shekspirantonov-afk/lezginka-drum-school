@@ -1,47 +1,46 @@
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import Icon from '@/components/ui/icon';
 
 const HeroSection = () => {
   return (
-    <section className="relative py-32 px-6 bg-gradient-to-r from-[#8B2519] via-[#B8421F] to-[#D2691E] text-white overflow-hidden">
-      <div className="absolute top-8 left-12 opacity-40">
-        <Icon name="Music" size={48} className="text-white" />
-      </div>
-      <div className="absolute bottom-12 right-16 opacity-40">
-        <Icon name="Sparkles" size={48} className="text-white" />
+    <section className="relative py-40 px-6 bg-gradient-to-br from-[#A0351F] via-[#C85A35] to-[#D4793D] text-white overflow-hidden">
+      <div className="absolute top-12 left-16 opacity-50">
+        <Icon name="Music" size={40} className="text-white" />
       </div>
       
       <div className="container mx-auto text-center relative z-10">
-        <h2 className="text-5xl md:text-6xl font-bold mb-4">
+        <h2 className="text-6xl md:text-7xl font-bold mb-6">
           Почувствуй
         </h2>
         <h3 
-          className="text-7xl md:text-8xl font-black mb-10"
+          className="text-7xl md:text-8xl lg:text-9xl font-black mb-12 animate-pulse"
           style={{ 
             WebkitTextStroke: '3px white',
             color: 'transparent',
-            letterSpacing: '0.02em'
+            letterSpacing: '0.05em'
           }}
         >
           Ритмы Гор
         </h3>
-        <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl mb-16 max-w-4xl mx-auto leading-relaxed">
           Изучай традиционные кавказские танцы и барабаны с<br/>профессиональными мастерами
         </p>
         
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-5 max-w-xl mx-auto">
           <Button 
             size="lg" 
-            className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-7 text-lg font-semibold rounded-md flex items-center gap-2"
+            className="bg-[#E8812D] hover:bg-[#D4721F] text-white px-12 py-7 text-lg font-semibold rounded-md flex items-center gap-3 shadow-lg"
           >
-            <Icon name="Play" size={20} />
+            <Icon name="Play" size={22} />
             Начать обучение
           </Button>
-          <Input 
-            placeholder="" 
-            className="bg-white text-gray-800 py-7 md:flex-1 border-0 rounded-md"
-          />
+          <Button 
+            size="lg" 
+            className="bg-white hover:bg-gray-100 text-[#C85A35] px-12 py-7 text-lg font-semibold rounded-md flex items-center gap-3 shadow-lg"
+          >
+            <Icon name="Phone" size={22} />
+            Связаться
+          </Button>
         </div>
       </div>
     </section>
