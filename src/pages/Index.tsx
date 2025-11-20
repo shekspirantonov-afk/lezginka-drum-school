@@ -95,7 +95,7 @@ const Index = () => {
       <Header />
       <HeroSection />
 
-      <section id="directions" className="py-20 px-4 bg-gray-50">
+      <section id="directions" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center mb-3 text-gray-900">
             Направления обучения
@@ -106,27 +106,32 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {directions.map((dir, idx) => (
-              <Card key={idx} className="bg-gradient-to-br from-red-600 to-red-700 text-white overflow-hidden">
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">{dir.title}</h3>
-                  <p className="text-white/90 mb-4 text-sm">{dir.subtitle}</p>
-                  
-                  <div className="flex items-center gap-4 mb-4 text-sm">
-                    <div className="flex items-center gap-1">
-                      <Icon name="Award" size={16} />
-                      <span>{dir.level}</span>
+              <Card key={idx} className="bg-white border-2 hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                <CardContent className="p-6 relative">
+                  <div className="absolute top-0 right-0 w-32 h-32 opacity-5 group-hover:opacity-10 transition-opacity" style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='20' fill='none' stroke='%23DC2626' stroke-width='2'/%3E%3Cpath d='M30 15 L35 25 L45 25 L37 32 L40 42 L30 35 L20 42 L23 32 L15 25 L25 25 Z' fill='%23DC2626'/%3E%3C/svg%3E")`,
+                    backgroundSize: 'cover'
+                  }} />
+                  <div className="relative z-10">
+                    <div className="inline-block px-3 py-1 bg-red-50 text-red-600 text-xs font-semibold rounded-full mb-3">
+                      {dir.level}
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Icon name="Clock" size={16} />
-                      <span>{dir.duration}</span>
+                    <h3 className="text-2xl font-bold mb-2 text-gray-900">{dir.title}</h3>
+                    <p className="text-gray-600 mb-4 text-sm">{dir.subtitle}</p>
+                    
+                    <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                      <div className="flex items-center gap-1">
+                        <Icon name="Clock" size={16} className="text-red-600" />
+                        <span>{dir.duration}</span>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between pt-4 border-t border-white/20">
-                    <span className="text-2xl font-bold">{dir.price}</span>
-                    <Button className="bg-white text-red-600 hover:bg-gray-100">
-                      Записаться
-                    </Button>
+                    
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                      <span className="text-2xl font-bold text-red-600">{dir.price}</span>
+                      <Button className="bg-gradient-to-r from-red-600 to-red-700 text-white hover:shadow-lg transition-all">
+                        Записаться
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -135,7 +140,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="schedule" className="py-20 px-4 bg-white">
+      <section id="schedule" className="py-20 px-4 bg-white relative">
+        <div className="absolute top-10 left-10 w-20 h-20 opacity-5" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 Q50 30 40 50 Q30 30 40 10' fill='%23DC2626'/%3E%3Cpath d='M40 30 Q60 40 40 70 Q20 40 40 30' fill='%23EA580C'/%3E%3C/svg%3E")`
+        }} />
+        <div className="absolute bottom-10 right-10 w-20 h-20 opacity-5" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 Q50 30 40 50 Q30 30 40 10' fill='%23DC2626'/%3E%3Cpath d='M40 30 Q60 40 40 70 Q20 40 40 30' fill='%23EA580C'/%3E%3C/svg%3E")`
+        }} />
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center mb-3 text-gray-900">
             Расписание занятий
@@ -149,14 +160,15 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Кавказские барабаны</h3>
               <div className="space-y-3">
                 {schedule.drums.map((item, idx) => (
-                  <Card key={idx}>
-                    <CardContent className="p-4 flex items-center justify-between">
+                  <Card key={idx} className="hover:shadow-md transition-shadow">
+                    <CardContent className="p-4 flex items-center justify-between hover:bg-red-50 transition-colors rounded-lg">
                       <div className="flex items-center gap-4">
-                        <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold">
+                        <div className="bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-lg font-semibold shadow-sm">
                           {item.time}
                         </div>
-                        <span className="text-gray-700">{item.group}</span>
+                        <span className="text-gray-700 font-medium">{item.group}</span>
                       </div>
+                      <Icon name="ChevronRight" size={20} className="text-red-600" />
                     </CardContent>
                   </Card>
                 ))}
@@ -167,14 +179,15 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Семейная лезгинка</h3>
               <div className="space-y-3">
                 {schedule.family.map((item, idx) => (
-                  <Card key={idx}>
-                    <CardContent className="p-4 flex items-center justify-between">
+                  <Card key={idx} className="hover:shadow-md transition-shadow">
+                    <CardContent className="p-4 flex items-center justify-between hover:bg-red-50 transition-colors rounded-lg">
                       <div className="flex items-center gap-4">
-                        <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold">
+                        <div className="bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-lg font-semibold shadow-sm">
                           {item.time}
                         </div>
-                        <span className="text-gray-700">{item.group}</span>
+                        <span className="text-gray-700 font-medium">{item.group}</span>
                       </div>
+                      <Icon name="ChevronRight" size={20} className="text-red-600" />
                     </CardContent>
                   </Card>
                 ))}
@@ -185,14 +198,15 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Свадебная лезгинка</h3>
               <div className="space-y-3">
                 {schedule.wedding.map((item, idx) => (
-                  <Card key={idx}>
-                    <CardContent className="p-4 flex items-center justify-between">
+                  <Card key={idx} className="hover:shadow-md transition-shadow">
+                    <CardContent className="p-4 flex items-center justify-between hover:bg-red-50 transition-colors rounded-lg">
                       <div className="flex items-center gap-4">
-                        <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold">
+                        <div className="bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-lg font-semibold shadow-sm">
                           {item.time}
                         </div>
-                        <span className="text-gray-700">{item.group}</span>
+                        <span className="text-gray-700 font-medium">{item.group}</span>
                       </div>
+                      <Icon name="ChevronRight" size={20} className="text-red-600" />
                     </CardContent>
                   </Card>
                 ))}

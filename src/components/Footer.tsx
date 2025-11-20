@@ -2,7 +2,11 @@ import Icon from '@/components/ui/icon';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12 px-4">
+    <footer className="bg-gray-900 text-white py-12 px-4 relative overflow-hidden">
+      {/* Деликатный орнамент */}
+      <div className="absolute top-0 left-0 w-full h-1" style={{
+        background: 'linear-gradient(90deg, transparent 0%, #DC2626 25%, #EA580C 50%, #DC2626 75%, transparent 100%)'
+      }} />
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -46,7 +50,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+        <div className="border-t pt-6 text-center text-gray-500 text-sm" style={{
+          borderImage: 'linear-gradient(90deg, transparent 0%, #DC2626 50%, transparent 100%) 1'
+        }}>
           <p>© 2025 Ритмы Гор. Все права защищены.</p>
         </div>
       </div>
