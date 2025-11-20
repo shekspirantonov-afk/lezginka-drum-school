@@ -92,18 +92,12 @@ const Index = () => {
       <header className="bg-white border-b sticky top-0 z-50 mx-0 px-0">
         <div className="container mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full overflow-hidden border border-gray-200">
-                <img 
-                  src="https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg" 
-                  alt="Логотип"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-orange-600"></h1>
-                <p className="text-sm text-gray-600"></p>
-              </div>
+            <div className="flex items-center">
+              <img 
+                src="https://cdn.poehali.dev/files/7ba66c70-52d0-4d8a-9219-ff546a78df7e.png" 
+                alt="Ритмы Гор"
+                className="h-16"
+              />
             </div>
             
             <nav className="hidden md:flex items-center gap-8 text-base text-gray-700">
@@ -482,19 +476,11 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-700">
-                  <img 
-                    src="https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/files/5766cbf7-a630-4991-9766-47fabeae4642.jpg" 
-                    alt="Логотип"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-orange-500">Ритмы Гор</h3>
-                  <p className="text-xs text-gray-400">Школа лезгинки и барабанов</p>
-                </div>
-              </div>
+              <img 
+                src="https://cdn.poehali.dev/files/7ba66c70-52d0-4d8a-9219-ff546a78df7e.png" 
+                alt="Ритмы Гор"
+                className="h-14 mb-4 brightness-200"
+              />
               <p className="text-gray-400 text-sm">
                 Приобщайтесь к традиционным кавказским танцам и музыке вместе с профессиональными мастерами. 
                 Занятия для детей и взрослых.
