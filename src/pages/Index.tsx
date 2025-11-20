@@ -24,8 +24,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white" style={{ fontFamily: "'Open Sans', sans-serif" }}>
-      <header className="bg-white shadow-sm py-4 px-4 sticky top-0 z-50">
-        <div className="container mx-auto flex items-center justify-between max-w-7xl">
+      <header className="bg-white shadow-sm px-4 sticky top-0 z-50 py-[50px]">
+        <div className="container mx-auto flex items-center justify-between max-w-7xl py-4">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#d04430] to-[#e8812d] flex items-center justify-center">
               <span className="text-white font-bold text-xl" style={{ fontFamily: "'Montserrat', sans-serif" }}>РГ</span>
