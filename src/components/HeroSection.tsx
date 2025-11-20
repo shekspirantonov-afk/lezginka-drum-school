@@ -22,12 +22,13 @@ const HeroSection = () => {
             Почувствуй
           </h1>
           <h2 className="text-7xl md:text-8xl mb-10 leading-none pulse-icon" style={{ 
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: '800',
+            fontFamily: "'Rounded Mplus 1c', 'Comfortaa', 'Montserrat', sans-serif",
+            fontWeight: '900',
             color: 'transparent',
             WebkitTextStroke: '3px white',
             textStroke: '3px white',
-            letterSpacing: '0.08em'
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase'
           }}>
             Ритмы Гор
           </h2>
