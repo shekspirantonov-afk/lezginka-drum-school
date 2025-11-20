@@ -76,24 +76,30 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {[
-              { title: 'Лезгинка', badge: 'Начинающие', desc: 'Традиционный кавказский танец с энергичными движениями и богатой культурной историей', time: '1.5 часа', students: '12 мест', price: 'от 3500₽' },
-              { title: 'Кавказские барабаны', badge: 'Средний', desc: 'Обучение игре на традиционных кавказских барабанах. Освойте древние ритмы гор', time: '1.5 часа', students: '8 мест', price: 'от 3500₽' },
-              { title: 'Семейная лезгинка', badge: 'Начинающие', desc: 'Занятия для всей семьи. Танцуйте вместе с детьми и создавайте незабываемые моменты', time: '1 час', students: '16 мест', price: 'от 3500₽' },
-              { title: 'Индивидуальные занятия', badge: 'Любой уровень', desc: 'Персональные уроки с мастером. Быстрое обучение в удобное для вас время', time: '1 час', students: '1 место', price: 'от 2500₽' }
+              { title: 'Лезгинка', badge: 'Начинающие', desc: 'Традиционный танец с огненным характером', time: '1.5 часа', price: '3500₽/мес' },
+              { title: 'Кавказские барабаны', badge: 'Начинающие', desc: 'Ритмы гор в ваших руках', time: '1.5 часа', price: '3500₽/мес' },
+              { title: 'Свадебная лезгинка', badge: 'Начинающие', desc: 'Грациозность и благородство', time: '1 час', price: '3500₽/мес' },
+              { title: 'Индивидуальные занятия', badge: 'Начинающие', desc: 'Воинственность и сила гор', time: '1.5 часа', price: '2500₽/час' }
             ].map((dir, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-[#d04430] to-[#e8812d] text-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
-                <span className="inline-block bg-white text-[#d04430] text-xs font-bold px-4 py-2 rounded-full mb-4" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                  {dir.badge}
-                </span>
-                <h3 className="text-3xl font-bold mb-3" style={{ fontFamily: "'Montserrat', sans-serif" }}>{dir.title}</h3>
-                <p className="text-base opacity-95 mb-6 leading-relaxed">{dir.desc}</p>
-                <div className="flex items-center gap-6 text-sm mb-6 opacity-90">
-                  <span className="flex items-center gap-2"><Icon name="Clock" size={18} />{dir.time}</span>
-                  <span className="flex items-center gap-2"><Icon name="Users" size={18} />{dir.students}</span>
+              <div key={idx} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all">
+                <div className="bg-gradient-to-r from-[#c1392b] to-[#e67e22] p-6 relative">
+                  <span className="absolute top-4 right-4 bg-white text-[#c1392b] text-xs font-bold px-4 py-1.5 rounded-full" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                    {dir.badge}
+                  </span>
+                  <h3 className="text-3xl font-bold text-white mb-2" style={{ fontFamily: "'Montserrat', sans-serif" }}>{dir.title}</h3>
+                  <p className="text-white text-base opacity-95">{dir.desc}</p>
                 </div>
-                <div className="flex items-center justify-between pt-6 border-t border-white/30">
-                  <span className="text-3xl font-bold" style={{ fontFamily: "'Montserrat', sans-serif" }}>{dir.price}</span>
-                  <Button className="bg-white text-[#d04430] hover:bg-gray-100 font-bold px-6 py-2" style={{ fontFamily: "'Montserrat', sans-serif" }}>Узнать больше</Button>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-gray-600 mb-6">
+                    <Icon name="Clock" size={18} className="text-gray-400" />
+                    <span className="text-sm">{dir.time}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-3xl font-bold text-[#c1392b]" style={{ fontFamily: "'Montserrat', sans-serif" }}>{dir.price}</span>
+                  </div>
+                  <Button className="w-full mt-4 bg-[#b52c1f] hover:bg-[#962419] text-white font-bold py-3 rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                    Записаться на занятие →
+                  </Button>
                 </div>
               </div>
             ))}
