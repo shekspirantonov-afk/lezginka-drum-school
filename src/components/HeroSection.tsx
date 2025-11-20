@@ -13,35 +13,35 @@ const HeroSection = () => {
         .pulse-icon { animation: pulse-sync 2s ease-in-out infinite; }
       `}} />
       
-      <section id="hero" className="relative bg-gradient-to-br from-[#b8341e] via-[#c1392b] to-[#d35400] text-white py-32 px-4 overflow-hidden">
-        <Icon name="Music" size={64} className="absolute top-12 left-12 opacity-70 pulse-icon" />
+      <section id="hero" className="relative bg-gradient-to-r from-[#a72c1a] via-[#d35400] to-[#e67e22] text-white py-32 px-4 overflow-hidden">
+        <Icon name="Music" size={64} className="absolute top-12 left-12 opacity-40" />
+        <Icon name="Music2" size={80} className="absolute bottom-12 right-12 opacity-30" />
         
         <div className="container mx-auto text-center relative z-10 max-w-5xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-3 leading-tight text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+          <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             Почувствуй
           </h1>
-          <h2 className="md:text-8xl font-black mb-8 leading-none pulse-icon text-amber-600 text-6xl" style={{ 
+          <h2 className="text-7xl md:text-8xl font-black mb-10 leading-none pulse-icon" style={{ 
             fontFamily: "'Montserrat', sans-serif",
-            color: '#fbbf24',
-            WebkitTextStroke: '2px #78350f',
-            textStroke: '2px #78350f',
-            letterSpacing: '0.02em',
-            textShadow: '4px 4px 0px rgba(0,0,0,0.3)'
+            color: 'transparent',
+            WebkitTextStroke: '3px white',
+            textStroke: '3px white',
+            letterSpacing: '0.05em'
           }}>
             Ритмы Гор
           </h2>
-          <p className="text-xl md:text-2xl mb-10 opacity-95 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl mb-12 leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: "'Open Sans', sans-serif" }}>
             Изучай традиционные кавказские танцы и барабаны с<br />
             профессиональными мастерами
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-3xl mx-auto">
-            <Button className="bg-[#e67e22] hover:bg-[#d35400] text-white font-bold px-8 py-6 text-lg rounded-xl shadow-xl flex items-center gap-2" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-              <Icon name="Play" size={20} />
+            <Button className="bg-[#e67e22] hover:bg-[#d35400] text-white font-semibold px-10 py-6 text-lg rounded-lg shadow-lg flex items-center gap-3" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              <Icon name="Play" size={22} />
               Начать обучение
             </Button>
             <Input 
               placeholder=""
-              className="bg-white text-gray-900 border-0 h-14 text-lg rounded-xl shadow-xl flex-1 max-w-md"
+              className="bg-white text-gray-900 border-0 h-14 text-lg rounded-lg shadow-lg flex-1 max-w-md"
             />
           </div>
         </div>
