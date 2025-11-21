@@ -15,7 +15,7 @@ const HeroSection = () => {
         .pulse-icon { animation: pulse-sync 2s ease-in-out infinite; }
       `}} />
       
-      <section id="hero" className="relative bg-gradient-to-r from-[#a72c1a] via-[#d35400] to-[#e67e22] text-white px-4 overflow-hidden py-[50px]">
+      <section id="hero" className="relative bg-gradient-to-r from-[#a72c1a] via-[#d35400] to-[#e67e22] text-white overflow-hidden py-[50px] px-0 mx-0 my-[34px]">
         <Icon name="Music" size={64} className="absolute top-12 left-12 opacity-40" />
         <Icon name="Music2" size={80} className="absolute bottom-12 right-12 opacity-30" />
         
@@ -23,7 +23,7 @@ const HeroSection = () => {
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             Почувствуй
           </h1>
-          <h2 className="md:text-8xl font-bold mb-10 leading-none pulse-icon text-6xl" style={{ 
+          <h2 className="md:text-8xl font-bold mb-10 leading-none pulse-icon text-6xl mx-[242px] px-0" style={{ 
             fontFamily: "'Montserrat', sans-serif",
             color: '#e67e22',
             WebkitTextStroke: '6px white',
