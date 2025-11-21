@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+    <div className="min-h-screen bg-white py-0 my-0" style={{ fontFamily: "'Open Sans', sans-serif" }}>
       <Header />
       <HeroSection />
       <DirectionsSection />
