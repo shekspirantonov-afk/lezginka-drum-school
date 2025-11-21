@@ -35,8 +35,7 @@ const HeroSection = () => {
             color: 'transparent',
             WebkitTextStroke: '3px white',
             textStroke: '3px white',
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase'
+            letterSpacing: '0.08em'
           }}>
             Ритмы Гор
           </h2>
