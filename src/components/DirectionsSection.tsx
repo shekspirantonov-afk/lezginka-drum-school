@@ -12,7 +12,7 @@ const DirectionsSection = () => {
   return (
     <section id="directions" className="py-12 md:py-20 px-4 bg-gray-50">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4 text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+        <h2 className="md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4 text-gray-900 text-4xl" style={{ fontFamily: "'Montserrat', sans-serif" }}>
           Направления обучения
         </h2>
         <p className="text-center text-gray-600 text-base md:text-lg mb-12 md:mb-16 max-w-2xl mx-auto">Погрузитесь в мир кавказской культуры через танец и музыку</p>
