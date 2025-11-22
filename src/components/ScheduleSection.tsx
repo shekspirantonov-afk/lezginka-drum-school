@@ -38,9 +38,7 @@ const ScheduleSection = () => {
               </div>
 
               <div className="bg-white rounded-xl p-4 md:p-5 shadow-md border-l-4 border-[#e67e22]">
-                <h4 className="font-bold text-lg md:text-xl text-gray-900 mb-3" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                  Семейная лезгинка
-                </h4>
+                <h4 className="font-bold text-lg md:text-xl text-gray-900 mb-3" style={{ fontFamily: "'Montserrat', sans-serif" }}>Хореографическая лезгинка</h4>
                 <div className="space-y-2 text-sm md:text-base text-gray-700">
                   <div className="flex justify-between items-center">
                     <span>15:00-16:30</span>
