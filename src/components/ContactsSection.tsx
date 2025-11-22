@@ -76,7 +76,8 @@ const ContactsSection = () => {
                 <div className="w-10 h-10 bg-[#d04430] rounded-full flex items-center justify-center flex-shrink-0"><Icon name="Phone" className="text-white" size={20} /></div>
                 <span className="font-bold text-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Телефон</span>
               </div>
-              <p className="text-gray-300 text-sm md:text-base ml-13">+7 (921) 785-42-33</p>
+              <p className="text-gray-300 text-sm md:text-base ml-13">+7 (921) 785-42-33
+ежедневно с 10:00 до 22:00</p>
             </div>
             <div>
               <div className="flex items-center gap-3 mb-3">
