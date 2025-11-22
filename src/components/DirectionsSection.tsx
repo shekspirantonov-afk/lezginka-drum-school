@@ -15,9 +15,7 @@ const DirectionsSection = () => {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4 text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>
           Направления обучения
         </h2>
-        <p className="text-center text-gray-600 text-base md:text-lg mb-12 md:mb-16 max-w-2xl mx-auto">
-          Выберите подходящее направление для себя или своих близких
-        </p>
+        <p className="text-center text-gray-600 text-base md:text-lg mb-12 md:mb-16 max-w-2xl mx-auto">Погрузитесь в мир кавказской культуры через танец и музыку</p>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {[
