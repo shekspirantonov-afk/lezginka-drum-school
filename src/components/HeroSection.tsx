@@ -30,10 +30,10 @@ const HeroSection = () => {
         <Icon name="Music2" size={64} className="absolute bottom-8 right-4 md:bottom-12 md:right-12 opacity-30" />
         
         <div className="container mx-auto text-center relative z-10 max-w-5xl">
-          <h1 className="md:text-6xl lg:text-7xl font-bold md:mb-4 leading-tight text-white py-0 my-0 text-6xl" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+          <h1 className="md:text-6xl lg:text-7xl font-bold md:mb-4 leading-tight text-white py-0 text-6xl my-0" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             Почувствуй
           </h1>
-          <h2 className="md:text-7xl font-bold md:mb-6 leading-none pulse-icon px-4 my-0 text-6xl" style={{ 
+          <h2 className="md:text-7xl font-bold md:mb-6 leading-none pulse-icon px-4 text-[5.63rem] my-0" style={{ 
             fontFamily: "'Montserrat', sans-serif",
             color: '#e67e22',
             WebkitTextStroke: '4px white',
@@ -42,10 +42,10 @@ const HeroSection = () => {
           }}>
             Ритмы Гор
           </h2>
-          <p className="text-lg md:text-xl lg:text-2xl md:mb-7 leading-relaxed max-w-4xl mx-auto px-4 py-1.5 my-0" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+          <p className="text-lg md:text-xl lg:text-2xl md:mb-7 leading-relaxed max-w-4xl mx-auto px-4 py-0 my-[31px]" style={{ fontFamily: "'Open Sans', sans-serif" }}>
             Изучай традиционные кавказские танцы и барабаны с профессиональными мастерами
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 max-w-3xl mx-auto px-4 my-[23px]">
+          <div className="flex flex-col items-center justify-center gap-4 max-w-3xl mx-auto px-4 my-[11px]">
             <Button 
               onClick={scrollToContacts}
               className="bg-[#e67e22] hover:bg-[#d35400] text-white font-semibold px-8 md:px-10 py-5 md:py-6 text-base md:text-lg rounded-lg shadow-lg flex items-center gap-3 w-full sm:w-auto" 
