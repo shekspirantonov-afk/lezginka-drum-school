@@ -23,7 +23,7 @@ const Header = () => {
           <img 
             src="https://cdn.poehali.dev/files/7ba66c70-52d0-4d8a-9219-ff546a78df7e.png" 
             alt="Ритмы Гор"
-            className="h-18 md:h-22 lg:h-26 px-0"
+            className="h-16 md:h-20 lg:h-24 px-0"
           />
         </button>
 
