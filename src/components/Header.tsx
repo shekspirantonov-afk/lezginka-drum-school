@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm px-4 sticky top-0 z-50">
+    <header className="bg-white shadow-sm sticky top-0 z-50 px-[11px] py-[9px]">
       <div className="container mx-auto flex items-center justify-between max-w-6xl my-0 py-[15px] px-[101px]">
         <button 
           onClick={() => scrollToSection('hero')}
@@ -23,7 +23,7 @@ const Header = () => {
           <img 
             src="https://cdn.poehali.dev/files/7ba66c70-52d0-4d8a-9219-ff546a78df7e.png" 
             alt="Ритмы Гор"
-            className="h-18 md:h-22 lg:h-24 px-0 py-0 mx-0 my-0"
+            className="h-19 md:h-23 lg:h-25 px-0 py-0 mx-0 my-0"
           />
         </button>
 
