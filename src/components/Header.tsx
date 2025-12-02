@@ -28,11 +28,11 @@ const Header = () => {
         </button>
 
         <nav className="hidden md:flex items-center gap-6 px-0 py-0 my-0 mx-0">
-          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-medium text-sm" onClick={() => scrollToSection('directions')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Направления</button>
-          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-medium text-sm" onClick={() => scrollToSection('schedule')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Расписание</button>
-          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-medium text-sm" onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Цены</button>
-          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-medium text-sm" onClick={() => scrollToSection('gallery')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Галерея</button>
-          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-medium text-sm" onClick={() => scrollToSection('contacts')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Контакты</button>
+          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('directions')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Направления</button>
+          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('schedule')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Расписание</button>
+          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Цены</button>
+          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('gallery')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Галерея</button>
+          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('contacts')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Контакты</button>
         </nav>
 
         <div className="flex items-center gap-4">
