@@ -33,7 +33,7 @@ const HeroSection = () => {
           <h1 className="md:text-6xl lg:text-7xl font-bold md:mb-4 leading-tight text-white py-0 my-0 text-6xl" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             Почувствуй
           </h1>
-          <h2 className="md:text-6xl font-bold md:mb-6 leading-none pulse-icon px-4 text-[5.63rem] my-0" style={{ 
+          <h2 className="md:text-6,5xl font-bold md:mb-6 leading-none pulse-icon px-4 text-[5.63rem] my-0" style={{ 
             fontFamily: "'Montserrat', sans-serif",
             color: '#e67e22',
             WebkitTextStroke: '4px white',
