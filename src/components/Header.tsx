@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm px-4 sticky top-0 z-50">
-      <div className="container mx-auto flex items-center justify-between max-w-7xl px-[105px] my-[13px] py-2">
+      <div className="container mx-auto flex items-center justify-between max-w-7xl my-[13px] py-2 px-[117px]">
         <button 
           onClick={() => scrollToSection('hero')}
           className="cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_8px_16px_rgba(234,88,12,0.4)]"
@@ -27,7 +27,7 @@ const Header = () => {
           />
         </button>
 
-        <nav className="hidden md:flex items-center gap-6 px-[11px]">
+        <nav className="hidden md:flex items-center gap-6 px-0 py-0 my-0 mx-2">
           <button onClick={() => scrollToSection('directions')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Направления</button>
           <button onClick={() => scrollToSection('schedule')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Расписание</button>
           <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Цены</button>
