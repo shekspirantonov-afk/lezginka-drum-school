@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm px-4 sticky top-0 z-50">
-      <div className="container mx-auto flex items-center justify-between max-w-7xl py-[5px] my-2.5 px-[85px]">
+      <div className="container mx-auto flex items-center justify-between max-w-7xl my-2.5 px-[85px] py-0">
         <button 
           onClick={() => scrollToSection('hero')}
           className="cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_8px_16px_rgba(234,88,12,0.4)]"
@@ -23,7 +23,7 @@ const Header = () => {
           <img 
             src="https://cdn.poehali.dev/files/7ba66c70-52d0-4d8a-9219-ff546a78df7e.png" 
             alt="Ритмы Гор"
-            className="h-20 md:h-24 lg:h-28 px-0.5"
+            className="h-18 md:h-22 lg:h-26 px-0"
           />
         </button>
 
