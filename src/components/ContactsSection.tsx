@@ -202,27 +202,6 @@ const ContactsSection = () => {
         </div>
 
         <div className="mt-12 md:mt-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>Как нас найти</h3>
-          
-          <div className="mb-8">
-            <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl p-4">
-              <div className="relative">
-                <img 
-                  src="https://cdn.poehali.dev/files/Безымянный-1.jpg" 
-                  alt="Схема прохода к школе Ритмы Гор"
-                  className="w-full h-auto rounded-lg"
-                />
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg max-w-xs">
-                  <div className="flex items-center gap-3 mb-2">
-                    <img src="/logo.svg" alt="Ритмы Гор" className="w-8 h-8" />
-                    <span className="font-bold text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>Ритмы Гор</span>
-                  </div>
-                  <p className="text-sm text-gray-600">Вход со стороны улицы Ефимова через калитку</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
 
         </div>
       </div>
