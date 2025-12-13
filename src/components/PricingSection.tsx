@@ -17,7 +17,7 @@ const PricingSection = () => {
           {[
             { title: 'Лезгинка', price: '3500₽', period: '/ месяц', features: ['Групповые занятия', 'Профессиональные инструкторы', 'Все уровни подготовки'] },
             { title: 'Кавказские барабаны', price: '3500₽', period: '/ месяц', features: ['Изучение ритмов', 'Традиционная техника', 'Концертные выступления'] },
-            { title: 'Свадебная лезгинка', price: '3500₽', period: '/ месяц', popular: true, features: ['Постановка танца', 'Индивидуальный подход', 'Подготовка к торжеству'] },
+            { title: 'Общий абонемент', price: '5000₽', period: '/ месяц', popular: true, features: ['8 занятий барабаны', '8 занятий танцы'] },
             { title: 'Индивидуальные занятия', price: '2500₽', period: '/ час', features: ['Персональный график', 'Быстрый результат', 'Любое направление'] }
           ].map((price, idx) => (
             <div key={idx} className={`bg-white rounded-2xl shadow-lg p-6 md:p-8 ${price.popular ? 'ring-4 ring-[#d04430] relative transform scale-105' : ''} hover:shadow-2xl transition-all`}>
