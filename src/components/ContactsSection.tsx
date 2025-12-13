@@ -70,7 +70,7 @@ const ContactsSection = () => {
               <p className="text-gray-300 text-sm md:text-base ml-13 leading-relaxed">г. Санкт-Петербург, ул. Ефимова, д. 4</p>
               <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">Вход со стороны улицы Ефимова в арку со шлагбаумом к парковке справа у здания Ростелеком. Вдоль забора до калитки, через калитку к подъезду.</p>
               <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">4 этаж, табличка "Спортивный квартал"</p>
-              <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">Метро "Садовая / Сенная / Спасская", 4 минуты пешком</p>
+              <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1"></p>
               <div className="flex flex-wrap gap-2 ml-13 mt-3">
                 <a 
                   href="https://yandex.ru/maps/?rtext=~59.925567,30.322771" 
