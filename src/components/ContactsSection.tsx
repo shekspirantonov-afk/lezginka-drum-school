@@ -157,52 +157,36 @@ const ContactsSection = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-2xl p-6 md:p-8 shadow-xl border border-gray-700">
-            <div className="text-center mb-6">
-              <div className="inline-block bg-[#d04430] rounded-full p-4 mb-4">
-                <Icon name="Calendar" size={32} className="text-white" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Записаться на занятие</h3>
-              <p className="text-gray-400 text-sm mt-2">Заполните форму и мы свяжемся с вами</p>
-            </div>
-            <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="bg-gray-800 rounded-2xl p-8 md:p-10 shadow-xl border border-gray-700">
+            <h3 className="text-3xl md:text-4xl font-bold mb-8 text-gray-200" style={{ fontFamily: "'Montserrat', sans-serif" }}>Записаться на занятие</h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">Ваше имя *</label>
+                <label className="block text-base font-normal mb-3 text-gray-300">Имя</label>
                 <Input 
-                  placeholder="Введите ваше имя" 
+                  placeholder="Ваше имя" 
                   value={formData.name} 
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })} 
-                  className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 h-12 rounded-lg" 
+                  className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 h-14 rounded-xl text-base" 
                   required 
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">Телефон *</label>
+                <label className="block text-base font-normal mb-3 text-gray-300">Телефон</label>
                 <Input 
                   type="tel" 
                   placeholder="+7 (___) ___-__-__" 
                   value={formData.phone} 
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })} 
-                  className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 h-12 rounded-lg" 
+                  className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 h-14 rounded-xl text-base" 
                   required 
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">Email</label>
-                <Input 
-                  type="email" 
-                  placeholder="example@mail.com" 
-                  value={formData.email} 
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
-                  className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 h-12 rounded-lg" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">Направление</label>
+                <label className="block text-base font-normal mb-3 text-gray-300">Направление</label>
                 <select 
                   value={formData.direction} 
                   onChange={(e) => setFormData({ ...formData, direction: e.target.value })} 
-                  className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg h-12 px-4"
+                  className="w-full bg-gray-700/50 border border-gray-600 text-gray-400 rounded-xl h-14 px-4 text-base focus:outline-none focus:ring-2 focus:ring-[#d04430]"
                 >
                   <option value="">Выберите направление</option>
                   <option value="Лезгинка">Лезгинка</option>
@@ -211,21 +195,13 @@ const ContactsSection = () => {
                   <option value="Индивидуальные занятия">Индивидуальные занятия</option>
                 </select>
               </div>
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">Сообщение</label>
-                <Textarea 
-                  placeholder="Расскажите о своих пожеланиях" 
-                  value={formData.message} 
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })} 
-                  className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 min-h-[100px] rounded-lg" 
-                />
-              </div>
               <Button 
                 type="submit" 
-                className="w-full bg-[#d04430] hover:bg-[#b03626] text-white h-12 text-base rounded-lg font-semibold" 
+                className="w-full bg-[#d04430] hover:bg-[#b03626] text-white h-14 text-base rounded-xl font-semibold flex items-center justify-center gap-2" 
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
+                <Icon name="Send" size={20} />
+                {isSubmitting ? 'Отправка...' : 'Записаться на занятие'}
               </Button>
             </form>
           </div>
