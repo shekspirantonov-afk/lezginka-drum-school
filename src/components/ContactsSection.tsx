@@ -67,11 +67,13 @@ const ContactsSection = () => {
                 <div className="w-10 h-10 bg-[#d04430] rounded-full flex items-center justify-center flex-shrink-0"><Icon name="MapPin" className="text-white" size={20} /></div>
                 <span className="font-bold text-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Адрес</span>
               </div>
-              <p className="text-gray-300 text-sm md:text-base ml-13 leading-relaxed">г. Санкт-Петербург, ул. Ефимова, д. 4А БЦ "МИР"</p>
+              <p className="text-gray-300 text-sm md:text-base ml-13 leading-relaxed">г. Санкт-Петербург, ул. Ефимова, д. 4</p>
+              <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">Здание Ростелекома, вход со стороны парковки во дворе с обратной стороны здания</p>
+              <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">5 этаж, табличка "Спортивный квартал"</p>
               <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">Метро "Садовая / Сенная / Спасская", 4 минуты пешком</p>
               <div className="flex flex-wrap gap-2 ml-13 mt-3">
                 <a 
-                  href="https://yandex.ru/maps/?rtext=~59.922445,30.309845" 
+                  href="https://yandex.ru/maps/?rtext=~59.923056,30.310278" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors"
@@ -80,7 +82,7 @@ const ContactsSection = () => {
                   Яндекс.Карты
                 </a>
                 <a 
-                  href="https://www.google.com/maps/dir/?api=1&destination=59.922445,30.309845" 
+                  href="https://www.google.com/maps/dir/?api=1&destination=59.923056,30.310278" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
@@ -89,7 +91,7 @@ const ContactsSection = () => {
                   Google Maps
                 </a>
                 <a 
-                  href="https://2gis.ru/spb/geo/70030076157777484" 
+                  href="https://2gis.ru/spb/firm/5348692178059071" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
@@ -211,14 +213,14 @@ const ContactsSection = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-center mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>Мы на карте</h3>
           <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl h-[400px] md:h-[500px]">
             <iframe
-              src="https://yandex.ru/map-widget/v1/?z=16&ol=biz&oid=1234567890&ll=30.309845,59.922445&pt=30.309845,59.922445,pm2rdm"
+              src="https://yandex.ru/map-widget/v1/?z=17&ll=30.310278,59.923056&pt=30.310278,59.923056,pm2rdm"
               width="100%"
               height="100%"
               frameBorder="0"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
-              title="Карта расположения школы Ритмы Гор"
+              title="Карта расположения школы Ритмы Гор - ул. Ефимова, 4"
             ></iframe>
           </div>
         </div>
