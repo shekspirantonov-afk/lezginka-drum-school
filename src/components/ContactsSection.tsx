@@ -67,9 +67,37 @@ const ContactsSection = () => {
                 <div className="w-10 h-10 bg-[#d04430] rounded-full flex items-center justify-center flex-shrink-0"><Icon name="MapPin" className="text-white" size={20} /></div>
                 <span className="font-bold text-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Адрес</span>
               </div>
-              <p className="text-gray-300 text-sm md:text-base ml-13 leading-relaxed">г. Санкт-Петербург, ул. Ефимова, д. 4А БЦ "МИР"
-
-Метро "Садовая / Сенная / Спасская", 4 минуты пешком</p>
+              <p className="text-gray-300 text-sm md:text-base ml-13 leading-relaxed">г. Санкт-Петербург, ул. Ефимова, д. 4А БЦ "МИР"</p>
+              <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">Метро "Садовая / Сенная / Спасская", 4 минуты пешком</p>
+              <div className="flex flex-wrap gap-2 ml-13 mt-3">
+                <a 
+                  href="https://yandex.ru/maps/?rtext=~59.922445,30.309845" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                >
+                  <Icon name="Navigation" size={16} />
+                  Яндекс.Карты
+                </a>
+                <a 
+                  href="https://www.google.com/maps/dir/?api=1&destination=59.922445,30.309845" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                >
+                  <Icon name="Navigation" size={16} />
+                  Google Maps
+                </a>
+                <a 
+                  href="https://2gis.ru/spb/geo/70030076157777484" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                >
+                  <Icon name="Navigation" size={16} />
+                  2ГИС
+                </a>
+              </div>
             </div>
             <div>
               <div className="flex items-center gap-3 mb-3">
@@ -78,13 +106,20 @@ const ContactsSection = () => {
               </div>
               <a href="tel:+79217854233" className="text-gray-300 hover:text-[#d04430] hover:underline transition-colors text-sm md:text-base ml-13 block cursor-pointer underline decoration-gray-500">+7 (921) 785-42-33</a>
               <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">ежедневно с 10:00 до 22:00</p>
+              <Button 
+                onClick={() => window.location.href='tel:+79217854233'}
+                className="ml-13 mt-3 bg-[#d04430] hover:bg-[#b03626] text-white"
+              >
+                <Icon name="Phone" size={18} className="mr-2" />
+                Позвонить
+              </Button>
             </div>
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-[#d04430] rounded-full flex items-center justify-center flex-shrink-0"><Icon name="Mail" className="text-white" size={20} /></div>
                 <span className="font-bold text-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Email</span>
               </div>
-              <p className="text-gray-300 text-sm md:text-base ml-13">info@ritmygor.ru</p>
+              <a href="mailto:tdvsgroup@yandex.ru" className="text-gray-300 hover:text-[#d04430] hover:underline transition-colors text-sm md:text-base ml-13 block cursor-pointer underline decoration-gray-500">tdvsgroup@yandex.ru</a>
             </div>
             <div>
               <div className="flex items-center gap-3 mb-3">
@@ -122,53 +157,73 @@ const ContactsSection = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-2xl p-6 md:p-8 shadow-xl">
-            <h3 className="text-xl md:text-2xl font-bold mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>Записаться на занятие</h3>
-            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
-              <Input 
-                placeholder="Ваше имя *" 
-                value={formData.name} 
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })} 
-                className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400 h-11 md:h-12 rounded-lg text-sm md:text-base" 
-                required 
-              />
-              <Input 
-                type="tel" 
-                placeholder="Телефон *" 
-                value={formData.phone} 
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })} 
-                className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400 h-11 md:h-12 rounded-lg text-sm md:text-base" 
-                required 
-              />
-              <Input 
-                type="email" 
-                placeholder="Email" 
-                value={formData.email} 
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
-                className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400 h-11 md:h-12 rounded-lg text-sm md:text-base" 
-              />
-              <select 
-                value={formData.direction} 
-                onChange={(e) => setFormData({ ...formData, direction: e.target.value })} 
-                className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg h-11 md:h-12 px-3 text-sm md:text-base"
-              >
-                <option value="">Выберите направление</option>
-                <option value="Лезгинка">Лезгинка</option>
-                <option value="Кавказские барабаны">Кавказские барабаны</option>
-                <option value="Свадебная лезгинка">Свадебная лезгинка</option>
-                <option value="Индивидуальные занятия">Индивидуальные занятия</option>
-              </select>
-              <Textarea 
-                placeholder="Ваше сообщение" 
-                value={formData.message} 
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })} 
-                className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400 min-h-[100px] md:min-h-[120px] rounded-lg text-sm md:text-base" 
-              />
+          <div className="bg-gray-800 rounded-2xl p-6 md:p-8 shadow-xl border border-gray-700">
+            <div className="text-center mb-6">
+              <div className="inline-block bg-[#d04430] rounded-full p-4 mb-4">
+                <Icon name="Calendar" size={32} className="text-white" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Записаться на занятие</h3>
+              <p className="text-gray-400 text-sm mt-2">Заполните форму и мы свяжемся с вами</p>
+            </div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-300">Ваше имя *</label>
+                <Input 
+                  placeholder="Введите ваше имя" 
+                  value={formData.name} 
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })} 
+                  className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 h-12 rounded-lg" 
+                  required 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-300">Телефон *</label>
+                <Input 
+                  type="tel" 
+                  placeholder="+7 (___) ___-__-__" 
+                  value={formData.phone} 
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })} 
+                  className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 h-12 rounded-lg" 
+                  required 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-300">Email</label>
+                <Input 
+                  type="email" 
+                  placeholder="example@mail.com" 
+                  value={formData.email} 
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
+                  className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 h-12 rounded-lg" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-300">Направление</label>
+                <select 
+                  value={formData.direction} 
+                  onChange={(e) => setFormData({ ...formData, direction: e.target.value })} 
+                  className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg h-12 px-4"
+                >
+                  <option value="">Выберите направление</option>
+                  <option value="Лезгинка">Лезгинка</option>
+                  <option value="Кавказские барабаны">Кавказские барабаны</option>
+                  <option value="Свадебная лезгинка">Свадебная лезгинка</option>
+                  <option value="Индивидуальные занятия">Индивидуальные занятия</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-300">Сообщение</label>
+                <Textarea 
+                  placeholder="Расскажите о своих пожеланиях" 
+                  value={formData.message} 
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })} 
+                  className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 min-h-[100px] rounded-lg" 
+                />
+              </div>
               <Button 
                 type="submit" 
+                className="w-full bg-[#d04430] hover:bg-[#b03626] text-white h-12 text-base rounded-lg font-semibold" 
                 disabled={isSubmitting}
-                className="w-full bg-[#d04430] hover:bg-[#b83a28] h-11 md:h-12 text-sm md:text-base font-bold rounded-lg disabled:opacity-50" 
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
               </Button>
@@ -176,12 +231,14 @@ const ContactsSection = () => {
           </div>
         </div>
 
-        <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl h-64 md:h-96">
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A7e9b3c8f8c0e4a8e8f9e8e8e8e8e8e8e&amp;source=constructor"
-            width="100%"
-            height="100%"
-            frameBorder="0"
+        <div className="mt-12 md:mt-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>Мы на карте</h3>
+          <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl h-[400px] md:h-[500px]">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?z=16&ol=biz&oid=1234567890&ll=30.309845,59.922445&pt=30.309845,59.922445,pm2rdm"
+              width="100%"
+              height="100%"
+              frameBorder="0"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
