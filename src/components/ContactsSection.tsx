@@ -78,26 +78,17 @@ const ContactsSection = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
-                  <Icon name="Navigation" size={16} />
+                  <Icon name="Map" size={16} />
                   Яндекс.Карты
                 </a>
                 <a 
-                  href="https://www.google.com/maps/dir/?api=1&destination=59.925567,30.322771" 
+                  href="yandexnavi://build_route_on_map?lat_to=59.925567&lon_to=30.322771" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
                   <Icon name="Navigation" size={16} />
-                  Google Maps
-                </a>
-                <a 
-                  href="https://2gis.ru/spb/firm/5348692178059071" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                >
-                  <Icon name="Navigation" size={16} />
-                  2ГИС
+                  Яндекс.Навигатор
                 </a>
               </div>
             </div>
