@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 px-[11px] py-[9px]">
-      <div className="container mx-auto flex items-center justify-between max-w-6xl my-0 px-[65px] py-2.5">
+      <div className="container mx-auto flex items-center justify-between max-w-6xl my-0 px-[26px] py-3">
         <button 
           onClick={() => scrollToSection('hero')}
           className="cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_8px_16px_rgba(234,88,12,0.4)]"
