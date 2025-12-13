@@ -15,7 +15,7 @@ const ScheduleSection = () => {
         <p className="text-center text-gray-600 text-base md:text-lg mb-12 md:mb-16">Выбирайте удобное время для занятий</p>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-          <div className="bg-gradient-to-br from-[#f8f9fa] to-white border-2 border-[#e67e22] rounded-2xl p-6 md:p-8 shadow-lg">
+          <div className="bg-gradient-to-br from-[#f8f9fa] to-white rounded-2xl p-6 md:p-8 shadow-lg">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#d04430] text-center" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               Суббота
             </h3>
@@ -69,7 +69,7 @@ const ScheduleSection = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-[#f8f9fa] to-white border-2 border-[#e67e22] rounded-2xl p-6 md:p-8 shadow-lg">
+          <div className="bg-gradient-to-br from-[#f8f9fa] to-white rounded-2xl p-6 md:p-8 shadow-lg">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#d04430] text-center" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               Воскресенье
             </h3>

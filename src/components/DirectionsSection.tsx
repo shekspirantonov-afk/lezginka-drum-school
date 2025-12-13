@@ -19,16 +19,13 @@ const DirectionsSection = () => {
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {[
-            { title: 'Лезгинка', badge: 'Начинающие', desc: 'Традиционный танец с огненным характером', time: '1.5 часа', price: '3500₽/мес' },
-            { title: 'Кавказские барабаны', badge: 'Начинающие', desc: 'Ритмы гор в ваших руках', time: '1.5 часа', price: '3500₽/мес' },
-            { title: 'Свадебная лезгинка', badge: 'Начинающие', desc: 'Грациозность и благородство', time: '1 час', price: '3500₽/мес' },
-            { title: 'Индивидуальные занятия', badge: 'Начинающие', desc: 'Персональный подход к каждому', time: '1 час', price: '2500₽/час' }
+            { title: 'Лезгинка', desc: 'Традиционный танец с огненным характером', time: '1.5 часа' },
+            { title: 'Кавказские барабаны', desc: 'Ритмы гор в ваших руках', time: '1.5 часа' },
+            { title: 'Свадебная лезгинка', desc: 'Грациозность и благородство', time: '1 час' },
+            { title: 'Индивидуальные занятия', desc: 'Персональный подход к каждому', time: '1 час' }
           ].map((dir, idx) => (
             <div key={idx} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all">
-              <div className="bg-gradient-to-r from-[#c1392b] to-[#e67e22] p-5 md:p-6 relative">
-                <span className="absolute top-3 md:top-4 right-3 md:right-4 bg-white text-[#c1392b] text-xs font-bold px-3 md:px-4 py-1 md:py-1.5 rounded-full" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                  {dir.badge}
-                </span>
+              <div className="bg-gradient-to-r from-[#c1392b] to-[#e67e22] p-5 md:p-6">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-2" style={{ fontFamily: "'Montserrat', sans-serif" }}>{dir.title}</h3>
                 <p className="text-white text-sm md:text-base opacity-95">{dir.desc}</p>
               </div>
@@ -36,9 +33,6 @@ const DirectionsSection = () => {
                 <div className="flex items-center gap-2 text-gray-600 mb-6">
                   <Icon name="Clock" size={18} className="text-gray-400" />
                   <span className="text-sm">{dir.time}</span>
-                </div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl md:text-3xl font-bold text-[#c1392b]" style={{ fontFamily: "'Montserrat', sans-serif" }}>{dir.price}</span>
                 </div>
                 <Button 
                   onClick={scrollToContacts}
