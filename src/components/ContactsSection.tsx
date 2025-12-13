@@ -73,7 +73,7 @@ const ContactsSection = () => {
               <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">Метро "Садовая / Сенная / Спасская", 4 минуты пешком</p>
               <div className="flex flex-wrap gap-2 ml-13 mt-3">
                 <a 
-                  href="https://yandex.ru/maps/?rtext=~59.923056,30.310278" 
+                  href="https://yandex.ru/maps/?rtext=~59.925694,30.322487" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors"
@@ -82,7 +82,7 @@ const ContactsSection = () => {
                   Яндекс.Карты
                 </a>
                 <a 
-                  href="https://www.google.com/maps/dir/?api=1&destination=59.923056,30.310278" 
+                  href="https://www.google.com/maps/dir/?api=1&destination=59.925694,30.322487" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
@@ -210,10 +210,30 @@ const ContactsSection = () => {
         </div>
 
         <div className="mt-12 md:mt-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>Мы на карте</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>Как нас найти</h3>
+          
+          <div className="mb-8">
+            <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl p-4">
+              <div className="relative">
+                <img 
+                  src="https://cdn.poehali.dev/files/2025-12-13_22-48-15.png" 
+                  alt="Схема прохода к школе Ритмы Гор"
+                  className="w-full h-auto rounded-lg"
+                />
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg max-w-xs">
+                  <div className="flex items-center gap-3 mb-2">
+                    <img src="/logo.svg" alt="Ритмы Гор" className="w-8 h-8" />
+                    <span className="font-bold text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>Ритмы Гор</span>
+                  </div>
+                  <p className="text-sm text-gray-600">Вход со стороны парковки во дворе</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl h-[400px] md:h-[500px]">
             <iframe
-              src="https://yandex.ru/map-widget/v1/?z=17&ll=30.310278,59.923056&pt=30.310278,59.923056,pm2rdm"
+              src="https://yandex.ru/map-widget/v1/?z=17&ll=30.322487,59.925694&pt=30.322487,59.925694,pm2rdm"
               width="100%"
               height="100%"
               frameBorder="0"
