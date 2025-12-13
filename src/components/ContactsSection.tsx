@@ -223,25 +223,7 @@ const ContactsSection = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl h-[400px] md:h-[500px] relative">
-            <div className="absolute top-4 left-4 z-10 bg-white rounded-xl p-3 shadow-lg flex items-center gap-3">
-              <img src="/logo.svg" alt="Ритмы Гор" className="w-10 h-10" />
-              <div>
-                <div className="font-bold text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>Ритмы Гор</div>
-                <div className="text-xs text-gray-600">ул. Ефимова, 4</div>
-              </div>
-            </div>
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?z=17&ll=30.322771,59.925567&pt=30.322771,59.925567,pm2rdm"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              title="Карта расположения школы Ритмы Гор - ул. Ефимова, 4"
-            ></iframe>
-          </div>
+
         </div>
       </div>
     </section>
