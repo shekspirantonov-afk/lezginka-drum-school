@@ -40,7 +40,7 @@ const Header = () => {
             Записаться
           </Button>
 
-          <button 
+          <button className="md:hidden p-2 text-gray-700 hover:text-[#d04430] transition-colors text-base" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-gray-700 hover:text-[#d04430] transition-colors"
           >
