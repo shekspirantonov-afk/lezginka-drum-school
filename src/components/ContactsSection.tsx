@@ -76,7 +76,7 @@ const ContactsSection = () => {
                 <div className="w-10 h-10 bg-[#d04430] rounded-full flex items-center justify-center flex-shrink-0"><Icon name="Phone" className="text-white" size={20} /></div>
                 <span className="font-bold text-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Телефон</span>
               </div>
-              <a href="tel:+79217854233" className="text-gray-300 hover:text-white transition-colors text-sm md:text-base ml-13 block">+7 (921) 785-42-33</a>
+              <a href="tel:+79217854233" className="text-gray-300 hover:text-[#d04430] hover:underline transition-colors text-sm md:text-base ml-13 block cursor-pointer underline decoration-gray-500">+7 (921) 785-42-33</a>
               <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">ежедневно с 10:00 до 22:00</p>
             </div>
             <div>
