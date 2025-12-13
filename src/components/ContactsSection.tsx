@@ -239,11 +239,12 @@ const ContactsSection = () => {
               width="100%"
               height="100%"
               frameBorder="0"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            title="Карта расположения школы Ритмы Гор"
-          ></iframe>
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              title="Карта расположения школы Ритмы Гор"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
