@@ -67,7 +67,8 @@ const ContactsSection = () => {
                 <div className="w-10 h-10 bg-[#d04430] rounded-full flex items-center justify-center flex-shrink-0"><Icon name="MapPin" className="text-white" size={20} /></div>
                 <span className="font-bold text-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Адрес</span>
               </div>
-              <p className="text-gray-300 text-sm md:text-base ml-13 leading-relaxed">г. Санкт-Петербург, ул. Ефимова, д. 4</p>
+              <p className="text-gray-300 text-sm md:text-base ml-13 leading-relaxed">г. Санкт-Петербург, ул. Ефимова, д. 4
+ст.м. "Садовая / Сенная / Спасская", 4 минуты пешком</p>
               <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">Вход со стороны улицы Ефимова в арку со шлагбаумом к парковке справа у здания Ростелеком. Вдоль забора до калитки, через калитку к подъезду.</p>
               <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">4 этаж, табличка "Спортивный квартал"</p>
               <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1"></p>
