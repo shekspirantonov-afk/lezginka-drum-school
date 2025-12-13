@@ -31,7 +31,7 @@ const Header = () => {
           <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('directions')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Направления</button>
           <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('schedule')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Расписание</button>
           <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Цены</button>
-          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('gallery')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Галерея</button>
+          <a href="#gallery" className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Галерея</a>
           <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('contacts')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Контакты</button>
         </nav>
 
