@@ -68,7 +68,7 @@ const ContactsSection = () => {
                 <span className="font-bold text-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Адрес</span>
               </div>
               <p className="text-gray-300 text-sm md:text-base ml-13 leading-relaxed">г. Санкт-Петербург, ул. Ефимова, д. 4</p>
-              <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">Здание Ростелекома, вход со стороны парковки во дворе с обратной стороны здания</p>
+              <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">Вход со стороны улицы Ефимова: парковка справа у здания Ростелеком, через калитку к подъезду</p>
               <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">5 этаж, табличка "Спортивный квартал"</p>
               <p className="text-gray-400 text-xs md:text-sm ml-13 mt-1">Метро "Садовая / Сенная / Спасская", 4 минуты пешком</p>
               <div className="flex flex-wrap gap-2 ml-13 mt-3">
@@ -216,7 +216,7 @@ const ContactsSection = () => {
             <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl p-4">
               <div className="relative">
                 <img 
-                  src="https://cdn.poehali.dev/files/2025-12-13_22-48-15.png" 
+                  src="https://cdn.poehali.dev/files/Безымянный-1.jpg" 
                   alt="Схема прохода к школе Ритмы Гор"
                   className="w-full h-auto rounded-lg"
                 />
@@ -225,7 +225,7 @@ const ContactsSection = () => {
                     <img src="/logo.svg" alt="Ритмы Гор" className="w-8 h-8" />
                     <span className="font-bold text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>Ритмы Гор</span>
                   </div>
-                  <p className="text-sm text-gray-600">Вход со стороны парковки во дворе</p>
+                  <p className="text-sm text-gray-600">Вход со стороны улицы Ефимова через калитку</p>
                 </div>
               </div>
             </div>
