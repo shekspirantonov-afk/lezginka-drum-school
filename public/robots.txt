@@ -16,7 +16,7 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-Sitemap: https://lezginka-drum-school.poehali.dev/sitemap.xml
+Sitemap: https://www.ритмыгор.рф/sitemap.xml
 
 # Основные страницы
 Allow: /#hero
