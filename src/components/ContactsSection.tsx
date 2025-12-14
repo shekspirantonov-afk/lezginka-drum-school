@@ -56,7 +56,7 @@ const ContactsSection = () => {
   };
 
   return (
-    <section id="contacts" className="py-12 md:py-20 px-4 bg-gray-900 text-white">
+    <section id="contacts" className="py-12 md:py-20 px-4 bg-gray-900 text-white scroll-mt-20 md:scroll-mt-24">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16" style={{ fontFamily: "'Montserrat', sans-serif" }}>Контакты</h2>
         
