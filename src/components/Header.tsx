@@ -14,25 +14,25 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50 px-[11px] py-5">
-      <div className="container mx-auto flex items-center justify-between max-w-6xl my-0 px-[26px] py-3">
+    <header className="bg-white shadow-sm sticky top-0 z-50 px-4 py-3 md:px-6 md:py-5">
+      <div className="container mx-auto flex items-center justify-between max-w-6xl">
         <button 
           onClick={() => scrollToSection('hero')}
           className="cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_8px_16px_rgba(234,88,12,0.4)]"
         >
           <img 
-            src="https://cdn.poehali.dev/files/7ba66c70-52d0-4d8a-9219-ff546a78df7e.png" 
+            src="https://cdn.poehali.dev/files/лого вариаент PNG.png" 
             alt="Ритмы Гор"
-            className="h-22 md:h-24 lg:h-28 mx-0 my-0 px-0 py-1.5"
+            className="h-16 md:h-20 lg:h-24 w-auto"
           />
         </button>
 
-        <nav className="hidden md:flex items-center gap-6 py-0 px-0 my-0 mx-0">
-          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('directions')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Направления</button>
-          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('schedule')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Расписание</button>
-          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Цены</button>
-          <a href="#gallery" className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Галерея</a>
-          <button className="text-gray-700 hover:text-[#d04430] transition-colors font-normal" onClick={() => scrollToSection('contacts')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Контакты</button>
+        <nav className="hidden md:flex items-center gap-6">
+          <button onClick={() => scrollToSection('directions')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Направления</button>
+          <button onClick={() => scrollToSection('schedule')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Расписание</button>
+          <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Цены</button>
+          <button onClick={() => scrollToSection('gallery')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Галерея</button>
+          <button onClick={() => scrollToSection('contacts')} className="text-gray-700 hover:text-[#d04430] transition-colors font-medium">Контакты</button>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -42,9 +42,9 @@ const Header = () => {
 
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-3 text-gray-900 hover:text-[#d04430] transition-colors bg-gray-100 hover:bg-gray-200 rounded-lg"
+            className="md:hidden p-2 text-gray-900 hover:text-[#d04430] transition-colors bg-gray-100 hover:bg-gray-200 rounded-lg"
           >
-            <Icon name={mobileMenuOpen ? "X" : "Menu"} size={32} />
+            <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
           </button>
         </div>
       </div>

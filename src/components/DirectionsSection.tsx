@@ -10,14 +10,14 @@ const DirectionsSection = () => {
   };
 
   return (
-    <section id="directions" className="py-12 md:py-20 px-4 bg-gray-50 my-0">
+    <section id="directions" className="py-12 md:py-20 px-4 bg-gray-50">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4 text-gray-900 text-4xl" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4 text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>
           Направления обучения
         </h2>
         <p className="text-center text-gray-600 text-base md:text-lg mb-12 md:mb-16 max-w-2xl mx-auto">Погрузитесь в мир кавказской культуры через танец и музыку</p>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {[
             { title: 'Лезгинка', desc: 'Традиционный танец с огненным характером', time: '1.5 часа' },
             { title: 'Кавказские барабаны', desc: 'Ритмы гор в ваших руках', time: '1.5 часа' },

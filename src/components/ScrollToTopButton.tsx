@@ -29,7 +29,7 @@ const ScrollToTopButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-6 right-24 md:right-28 z-50 bg-[#e67e22] hover:bg-[#d35400] text-white rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-[0_10px_30px_rgba(230,126,34,0.5)]"
+      className="fixed bottom-4 right-20 md:bottom-6 md:right-28 z-50 bg-[#e67e22] hover:bg-[#d35400] text-white rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-[0_10px_30px_rgba(230,126,34,0.5)]"
       aria-label="Наверх"
     >
       <Icon name="ArrowUp" size={28} className="md:w-8 md:h-8" />

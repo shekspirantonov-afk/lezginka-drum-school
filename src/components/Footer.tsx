@@ -2,9 +2,9 @@ import Icon from '@/components/ui/icon';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-400 py-16 px-4">
+    <footer className="bg-black text-gray-400 py-12 md:py-16 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
           <div>
             <h4 className="text-white font-bold mb-5 text-xl" style={{ fontFamily: "'Montserrat', sans-serif" }}>О школе</h4>
             <p className="text-base leading-relaxed">Ритмы Гор — профессиональная школа лезгинки и кавказских барабанов в Санкт-Петербурге. Мы сохраняем и передаём традиции кавказской культуры.</p>

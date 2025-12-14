@@ -21,34 +21,32 @@ const HeroSection = () => {
         .pulse-icon { animation: pulse-sync 2s ease-in-out infinite; }
       `}} />
       
-      <section id="hero" className="relative text-white overflow-hidden px-4 my-0 py-0" style={{ 
-        paddingTop: '7vh', 
-        paddingBottom: '7vh',
+      <section id="hero" className="relative text-white overflow-hidden px-4 py-12 md:py-16 lg:py-20" style={{ 
         background: 'linear-gradient(135deg, #a72c1a 0%, #d35400 50%, #a72c1a 100%)'
       }}>
-        <Icon name="Music" size={48} className="absolute top-8 left-4 md:top-12 md:left-12 opacity-40" />
-        <Icon name="Music2" size={64} className="absolute bottom-8 right-4 md:bottom-12 md:right-12 opacity-30" />
+        <Icon name="Music" size={32} className="absolute top-4 left-4 md:top-12 md:left-12 md:w-12 md:h-12 opacity-40" />
+        <Icon name="Music2" size={40} className="absolute bottom-4 right-4 md:top-12 md:right-12 md:w-16 md:h-16 opacity-30" />
         
         <div className="container mx-auto text-center relative z-10 max-w-5xl">
-          <h1 className="md:text-6xl lg:text-7xl font-bold md:mb-4 leading-tight text-white py-0 my-0 px-0 text-4xl" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-2 md:mb-4 leading-tight text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             Почувствуй
           </h1>
-          <h2 className="md:text-7xl md:mb-6 leading-none pulse-icon px-4 my-0 font-bold text-4xl" style={{ 
+          <h2 className="text-3xl md:text-7xl mb-4 md:mb-6 leading-none pulse-icon font-bold" style={{ 
             fontFamily: "'Montserrat', sans-serif",
             color: '#e67e22',
-            WebkitTextStroke: '4px white',
-            textStroke: '4px white',
+            WebkitTextStroke: '2px white',
+            textStroke: '2px white',
             paintOrder: 'stroke fill'
           }}>
             Ритмы Гор
           </h2>
-          <p className="text-lg md:text-xl lg:text-2xl md:mb-7 leading-relaxed max-w-4xl mx-auto px-4 py-0 my-[31px]" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+          <p className="text-base md:text-xl lg:text-2xl mb-6 md:mb-8 leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: "'Open Sans', sans-serif" }}>
             Изучай традиционные кавказские танцы и барабаны с профессиональными мастерами
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 max-w-3xl mx-auto px-4 my-[11px]">
+          <div className="flex flex-col items-center justify-center gap-4 max-w-3xl mx-auto">
             <Button 
               onClick={scrollToContacts}
-              className="bg-[#e67e22] hover:bg-[#d35400] text-white font-semibold px-8 md:px-10 py-5 md:py-6 text-base md:text-lg rounded-lg shadow-lg flex items-center gap-3 w-full sm:w-auto" 
+              className="bg-[#e67e22] hover:bg-[#d35400] text-white font-semibold px-6 md:px-10 py-4 md:py-6 text-base md:text-lg rounded-lg shadow-lg flex items-center justify-center gap-3 w-full sm:w-auto max-w-sm" 
               style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               <Icon name="Play" size={22} />

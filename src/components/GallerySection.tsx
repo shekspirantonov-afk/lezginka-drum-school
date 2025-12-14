@@ -72,9 +72,9 @@ const GallerySection = () => {
         >
           <button
             onClick={closeLightbox}
-            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+            className="absolute top-2 right-2 md:top-4 md:right-4 text-white hover:text-gray-300 transition-colors z-10"
           >
-            <Icon name="X" size={32} />
+            <Icon name="X" size={24} className="md:w-8 md:h-8" />
           </button>
 
           <button
@@ -82,9 +82,9 @@ const GallerySection = () => {
               e.stopPropagation();
               prevImage();
             }}
-            className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10 bg-black bg-opacity-50 rounded-full p-3"
+            className="absolute left-2 md:left-4 text-white hover:text-gray-300 transition-colors z-10 bg-black bg-opacity-50 rounded-full p-2 md:p-3"
           >
-            <Icon name="ChevronLeft" size={32} />
+            <Icon name="ChevronLeft" size={24} className="md:w-8 md:h-8" />
           </button>
 
           <button
@@ -92,9 +92,9 @@ const GallerySection = () => {
               e.stopPropagation();
               nextImage();
             }}
-            className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10 bg-black bg-opacity-50 rounded-full p-3"
+            className="absolute right-2 md:right-4 text-white hover:text-gray-300 transition-colors z-10 bg-black bg-opacity-50 rounded-full p-2 md:p-3"
           >
-            <Icon name="ChevronRight" size={32} />
+            <Icon name="ChevronRight" size={24} className="md:w-8 md:h-8" />
           </button>
 
           <img 
