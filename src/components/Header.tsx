@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 px-4 py-3 md:px-6 md:py-5">
-      <div className="container mx-auto flex items-center justify-between max-w-6xl">
+      <div className="container mx-auto flex items-center justify-between max-w-6xl px-0">
         <button 
           onClick={() => scrollToSection('hero')}
           className="flex items-center gap-3 md:gap-4 cursor-pointer transition-all duration-300 hover:scale-105"
@@ -34,10 +34,10 @@ const Header = () => {
             className="h-14 md:h-16 lg:h-20 w-auto"
           />
           <div className="text-left">
-            <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif", color: '#e67e22' }}>
+            <h1 className="sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight px-0 mx-0 text-xl" style={{ fontFamily: "'Montserrat', sans-serif", color: '#e67e22' }}>
               Ритмы Гор
             </h1>
-            <p className="text-[10px] sm:text-xs md:text-sm text-gray-700 font-medium leading-tight mt-0.5">
+            <p className="sm:text-xs md:text-sm text-gray-700 leading-tight mt-0.5 text-xs mx-0 font-medium">
               Школа лезгинки и<br className="hidden sm:block" /> кавказских барабанов
             </p>
           </div>
