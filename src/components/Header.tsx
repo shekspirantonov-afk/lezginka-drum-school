@@ -18,13 +18,21 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between max-w-6xl">
         <button 
           onClick={() => scrollToSection('hero')}
-          className="cursor-pointer transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_8px_16px_rgba(234,88,12,0.4)]"
+          className="flex items-center gap-3 md:gap-4 cursor-pointer transition-all duration-300 hover:scale-105"
         >
           <img 
             src="https://cdn.poehali.dev/files/лого вариаент PNG.png" 
             alt="Ритмы Гор"
-            className="h-16 md:h-20 lg:h-24 w-auto"
+            className="h-14 md:h-16 lg:h-20 w-auto"
           />
+          <div className="text-left hidden sm:block">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif", color: '#d04430' }}>
+              Ритмы Гор
+            </h1>
+            <p className="text-xs md:text-sm text-gray-700 font-medium leading-tight mt-0.5">
+              Школа лезгинки и<br />кавказских барабанов
+            </p>
+          </div>
         </button>
 
         <nav className="hidden md:flex items-center gap-6">
