@@ -29,7 +29,7 @@ const Header = () => {
           className="cursor-pointer transition-all duration-300 hover:scale-105 w-full max-w-[250px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[550px]"
         >
           <img 
-            src="https://cdn.poehali.dev/files/лого для кейков вариаент 223.png" 
+            src="https://cdn.poehali.dev/files/лого для кейков вариаент 2233.png" 
             alt="Ритмы Гор"
             className="w-full h-auto mx-0 py-0 my-0 px-[65px]"
           />
