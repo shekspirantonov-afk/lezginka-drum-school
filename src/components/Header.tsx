@@ -37,9 +37,8 @@ const Header = () => {
             <h1 className="text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif", color: '#e67e22' }}>
               Ритмы Гор
             </h1>
-            <p className="text-[9px] leading-tight sm:text-xs md:text-sm text-gray-700 font-normal md:font-medium mt-0.5">
-              Школа лезгинки и<br className="sm:hidden" /> кавказских барабанов
-            </p>
+            <p className="leading-tight sm:text-xs md:text-sm text-gray-700 font-normal md:font-medium mt-0.5 text-base">Школа лезгинки и 
+кавказских барабанов</p>
           </div>
         </button>
 
