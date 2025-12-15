@@ -31,7 +31,7 @@ const Header = () => {
           <img 
             src="https://cdn.poehali.dev/files/лого для кейков вариаент 223.png" 
             alt="Ритмы Гор"
-            className="w-full h-auto px-[30px]"
+            className="w-full h-auto mx-0 py-0 my-0 px-[65px]"
           />
         </button>
 
