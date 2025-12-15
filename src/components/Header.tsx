@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50 px-4 py-3 md:px-6 md:py-5">
+    <header className="bg-white shadow-sm sticky top-0 z-50 md:px-6 md:py-5 px-[25px] py-5">
       <div className="container mx-auto flex items-center justify-between max-w-6xl px-0">
         <button 
           onClick={() => scrollToSection('hero')}
