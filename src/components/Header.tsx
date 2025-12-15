@@ -34,10 +34,10 @@ const Header = () => {
             className="h-14 md:h-16 lg:h-20 w-auto"
           />
           <div className="text-left">
-            <h1 className="text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight whitespace-nowrap" style={{ fontFamily: "'Montserrat', sans-serif", color: '#e67e22' }}>
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight whitespace-nowrap" style={{ fontFamily: "'Montserrat', sans-serif", color: '#e67e22' }}>
               Ритмы Гор
             </h1>
-            <p className="text-[10px] sm:text-xs md:text-sm text-gray-700 leading-tight mt-0.5 font-medium">
+            <p className="text-xs sm:text-xs md:text-sm text-gray-700 leading-tight mt-0.5 font-medium">
               Школа лезгинки и<br /> кавказских барабанов
             </p>
           </div>
