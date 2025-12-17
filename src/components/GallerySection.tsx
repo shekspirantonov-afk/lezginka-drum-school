@@ -10,7 +10,7 @@ const GallerySection = () => {
     'https://cdn.poehali.dev/files/20.jpg',
     'https://cdn.poehali.dev/files/19.jpg',
     'https://cdn.poehali.dev/files/18.jpg',
-    'https://cdn.poehali.dev/files/16.jpg',
+    'https://cdn.poehali.dev/files/17.png',
     'https://cdn.poehali.dev/files/16.jpg',
     'https://cdn.poehali.dev/files/15.jpg',
     'https://cdn.poehali.dev/files/14.jpg',
