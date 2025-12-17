@@ -22,16 +22,16 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50 px-4 py-3 md:px-6 md:py-5">
+    <header className="bg-white shadow-sm sticky top-0 z-50 md:px-6 md:py-5 px-[25px] py-5">
       <div className="container mx-auto flex items-center justify-between max-w-6xl px-0">
         <button 
           onClick={() => scrollToSection('hero')}
           className="cursor-pointer transition-all duration-300 hover:scale-105 w-full max-w-[250px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[550px]"
         >
           <img 
-            src="https://cdn.poehali.dev/files/лого для кейков вариаент 2233.png" 
+            src="https://cdn.poehali.dev/files/лого для кейков вариаент 223.png" 
             alt="Ритмы Гор"
-            className="w-full h-auto mx-0 py-0 my-0 px-[65px]"
+            className="w-full h-auto"
           />
         </button>
 
