@@ -17,7 +17,7 @@ const GallerySection = () => {
     'https://cdn.poehali.dev/files/13.jpg',
     'https://cdn.poehali.dev/files/12.jpg',
     'https://cdn.poehali.dev/files/11.jpg',
-    'https://cdn.poehali.dev/files/мелкие танцуют.jpg',
+    'https://cdn.poehali.dev/files/21.jpg',
   ];
 
   const openLightbox = (image: string, index: number) => {
