@@ -25,7 +25,7 @@ const HeroSection = () => {
         background: 'linear-gradient(135deg, #a72c1a 0%, #d35400 50%, #a72c1a 100%)'
       }}>
         <Icon name="Music" size={32} className="absolute top-4 left-4 md:top-12 md:left-12 md:w-12 md:h-12 opacity-40" />
-        <Icon name="Music2" size={40} className="absolute bottom-4 right-4 md:bottom-12 md:right-12 md:w-16 md:h-16 opacity-30" />
+        <Icon name="Music2" size={32} className="absolute bottom-4 right-4 md:bottom-12 md:right-12 md:w-12 md:h-12 opacity-30" />
         
         <div className="container mx-auto text-center relative z-10 max-w-5xl">
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-2 md:mb-4 leading-tight text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
