@@ -6,18 +6,16 @@ const GallerySection = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const images = [
-    'https://cdn.poehali.dev/files/PHOTO-2025-12-13-20-30-35.jpg',
-    'https://cdn.poehali.dev/files/20.jpg',
-    'https://cdn.poehali.dev/files/19.jpg',
-    'https://cdn.poehali.dev/files/18.jpg',
-    'https://cdn.poehali.dev/files/17.png',
-    'https://cdn.poehali.dev/files/мелкие танцуют.jpg',
-    'https://cdn.poehali.dev/files/15.jpg',
-    'https://cdn.poehali.dev/files/14.jpg',
-    'https://cdn.poehali.dev/files/13.jpg',
-    'https://cdn.poehali.dev/files/12.jpg',
-    'https://cdn.poehali.dev/files/11.jpg',
-    'https://cdn.poehali.dev/files/21.jpg',
+    'https://cdn.poehali.dev/files/01.jpg',
+    'https://cdn.poehali.dev/files/02.jpg',
+    'https://cdn.poehali.dev/files/03.jpg',
+    'https://cdn.poehali.dev/files/04.jpg',
+    'https://cdn.poehali.dev/files/05.png',
+    'https://cdn.poehali.dev/files/06.jpg',
+    'https://cdn.poehali.dev/files/07.jpg',
+    'https://cdn.poehali.dev/files/08.jpg',
+    'https://cdn.poehali.dev/files/09.jpg',
+    'https://cdn.poehali.dev/files/10.jpg',
   ];
 
   const openLightbox = (image: string, index: number) => {
