@@ -11,7 +11,6 @@ const GallerySection = () => {
     'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/bucket/4d9ee0b6-4f47-4a24-883b-4e52bd257582.PNG',
     'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/bucket/95e474d1-b96a-4964-9ef3-ef357bfa387f.PNG',
     'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/bucket/17c04839-609b-4abe-8b6c-f5e44ba1b5fc.jpg',
-    'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/bucket/30c5123d-2048-4bef-9f91-2764b33cb1b9.jpg',
     'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/bucket/5b9e790b-546a-443e-a770-537c7fb2e29a.jpg',
     'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/bucket/60877f9e-8294-497c-a63f-fdcce61f48a1.jpg',
     'https://cdn.poehali.dev/projects/7b926d61-74ef-4f01-9d24-01c42a62c5a3/bucket/bd28783f-a7c4-4269-80d5-cd60b1e32e19.jpg',
