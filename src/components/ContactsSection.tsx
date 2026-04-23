@@ -1,12 +1,21 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 
+const directions = [
+  'Лезгинка',
+  'Кавказские барабаны',
+  'Свадебная лезгинка',
+  'Индивидуальные занятия',
+];
+
 const ContactsSection = () => {
   const { toast } = useToast();
+  const [directionOpen, setDirectionOpen] = useState(false);
+  const directionRef = useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -15,6 +24,16 @@ const ContactsSection = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (directionRef.current && !directionRef.current.contains(e.target as Node)) {
+        setDirectionOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -177,17 +196,32 @@ const ContactsSection = () => {
               </div>
               <div>
                 <label className="block text-base font-normal mb-3 text-gray-300">Направление</label>
-                <select 
-                  value={formData.direction} 
-                  onChange={(e) => setFormData({ ...formData, direction: e.target.value })} 
-                  className="w-full bg-gray-700/50 border border-gray-600 text-gray-400 rounded-xl h-14 px-4 text-base focus:outline-none focus:ring-2 focus:ring-[#d04430]"
-                >
-                  <option value="">Выберите направление</option>
-                  <option value="Лезгинка">Лезгинка</option>
-                  <option value="Кавказские барабаны">Кавказские барабаны</option>
-                  <option value="Свадебная лезгинка">Свадебная лезгинка</option>
-                  <option value="Индивидуальные занятия">Индивидуальные занятия</option>
-                </select>
+                <div ref={directionRef} className="relative">
+                  <button
+                    type="button"
+                    onClick={() => setDirectionOpen(!directionOpen)}
+                    className="w-full bg-gray-700/50 border border-gray-600 rounded-xl h-14 px-4 text-base focus:outline-none focus:ring-2 focus:ring-[#d04430] flex items-center justify-between text-left"
+                  >
+                    <span className={formData.direction ? 'text-white' : 'text-gray-400'}>
+                      {formData.direction || 'Выберите направление'}
+                    </span>
+                    <Icon name={directionOpen ? 'ChevronUp' : 'ChevronDown'} size={18} className="text-gray-400 flex-shrink-0" />
+                  </button>
+                  {directionOpen && (
+                    <div className="absolute z-50 w-full mt-1 bg-gray-800 border border-gray-600 rounded-xl overflow-hidden shadow-xl">
+                      {directions.map((dir) => (
+                        <button
+                          key={dir}
+                          type="button"
+                          onClick={() => { setFormData({ ...formData, direction: dir }); setDirectionOpen(false); }}
+                          className={`w-full text-left px-4 py-3 text-base hover:bg-[#d04430] hover:text-white transition-colors ${formData.direction === dir ? 'bg-[#d04430] text-white' : 'text-gray-200'}`}
+                        >
+                          {dir}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
               <Button 
                 type="submit" 
